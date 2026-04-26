@@ -1,4 +1,4 @@
-@prefix : <http://www.example.org/meddevice-risk#> .
+@prefix : <https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,49 +11,79 @@
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
 
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 #################################################################
 # ONTOLOGY METADATA
-# Comentario para Lauv:
+# Comentario:
 # Esta sección corresponde a los metadatos generales de la ontología.
-# En WIDOCO aparecerán como título, descripción y autor.
 #################################################################
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
-<http://www.example.org/meddevice-risk>
+
+
+<https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#>
     rdf:type owl:Ontology ;
     dcterms:title "Medical Device Risk Ontology"@en ;
-    dcterms:description "Ontology for representing medical devices, manufacturers, risks, incidents and field safety corrective actions under MDR and IVDR."@en ;
-    dcterms:creator "Lauv"@en ;
-    dcterms:created "2026-04-26"^^xsd:date ;
+    dcterms:description "EN: Ontology for representing medical devices, manufacturers, risks, incidents and field safety corrective actions under MDR and IVDR."@en ;
+    dcterms:creator "lvlupcodex"@en ;
+    dcterms:created "2026-04-20"^^xsd:date ;
     rdfs:label "Medical Device Risk Ontology"@en ;
     rdfs:comment "This ontology models a European-style catalogue of medical devices, manufacturers, IMDRF risks, reported incidents and field safety corrective actions. It is designed as an application ontology for the PEC2 assignment."@en .
 
+
+
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 #################################################################
 # REUSED EXTERNAL VOCABULARIES
 # Comentario para el documento:
-# - schema:MedicalDevice se usa para alinear la clase local MedicalDevice.
+# - schema:MedicalDevice se ha implementado para alinear la clase local MedicalDevice.
 # - foaf:Organization se usa para Manufacturer.
-# - skos:Concept se usa para vocabularios controlados.
+# - skos:Concept se usa para los vocabularios controlados.
 # - dcterms se usa para metadatos.
 # - prov se usa de forma ligera para trazabilidad.
+# - Se destacan las jurificaciones dentro de la PEC
 #################################################################
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
+
+
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 #################################################################
 # ROOT CLASS
-# DRAW.IO / CHOWLK:
+# DRAW.IO
 # Esta clase es la raíz común del modelo T-Box.
 #################################################################
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+
+
+
+# En este apartado, se declara la entidad MedicalDeviceRiskEntity, que "engloba" las demás que serán definidas
 
 :MedicalDeviceRiskEntity
     rdf:type owl:Class ;
     rdfs:label "Medical device risk entity"@en ;
     rdfs:comment "Root class for all local entities defined in the medical device risk ontology."@en .
 
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 #################################################################
 # MAIN DOMAIN CLASSES
-# DRAW.IO / CHOWLK:
-# Estas son las cajas principales del diagrama:
+# DRAW.IO - Justificación. Al ser las clases prinicpales del dominio, se han tenido en cuenta para determinar caules son las "cajas" dentro del diagrama. Siendo de tipo:
 # MedicalDevice, Manufacturer, Risk, Incident, FieldSafetyCorrectiveAction.
 #################################################################
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Instrumento Médico
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
 :MedicalDevice
     rdf:type owl:Class ;
@@ -63,11 +93,21 @@
     rdfs:seeAlso <http://schema.org/MedicalDevice> ;
     rdfs:seeAlso <https://dbpedia.org/resource/Medical_device> .
 
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Manufacturador
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :Manufacturer
     rdf:type owl:Class ;
     rdfs:subClassOf :MedicalDeviceRiskEntity , foaf:Organization ;
     rdfs:label "Manufacturer"@en ;
     rdfs:comment "An organization responsible for manufacturing or placing a medical device on the market."@en .
+
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Riesgo
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
 :Risk
     rdf:type owl:Class ;
@@ -75,11 +115,22 @@
     rdfs:label "Risk"@en ;
     rdfs:comment "A risk identified for a medical device according to a controlled risk terminology, such as IMDRF-inspired coding."@en .
 
+
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Incidente
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :Incident
     rdf:type owl:Class ;
     rdfs:subClassOf :MedicalDeviceRiskEntity ;
     rdfs:label "Incident"@en ;
     rdfs:comment "A reported event associated with a medical device, a risk and an outcome."@en .
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Campo de acción correctiva, siendo sublcase de MedicalDeviceRiskEntity 
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
 :FieldSafetyCorrectiveAction
     rdf:type owl:Class ;
@@ -87,79 +138,133 @@
     rdfs:label "Field safety corrective action"@en ;
     rdfs:comment "A field safety corrective action, such as a recall, safety alert, user notice or in-situ correction, associated with an incident."@en .
 
+
+
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 #################################################################
 # CONTROLLED VOCABULARY CLASSES
-# DRAW.IO / CHOWLK:
-# Estas clases sirven para no dejar categorías como strings muertos.
-# En el diagrama pueden ir como vocabularios controlados SKOS.
+# DRAW.IO - Justificación y referencia:
+# Estas clases sirven para no dejar categorías como "strings" (Tal y como se ha declarado en la nota justificativa del documento).
+# En el diagrama se han puesto como vocabularios controlados SKOS.
 #################################################################
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Concepto de vocabulario controlado
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :ControlledVocabularyConcept
     rdf:type owl:Class ;
     rdfs:subClassOf :MedicalDeviceRiskEntity , skos:Concept ;
     rdfs:label "Controlled vocabulary concept"@en ;
     rdfs:comment "A controlled concept used to normalize categorical values from the CSV files."@en .
 
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# RiskClass
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :RiskClass
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Risk class"@en ;
     rdfs:comment "Regulatory risk class assigned to a device under MDR or IVDR."@en .
 
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Marco Regulatorio
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :RegulatoryFramework
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Regulatory framework"@en ;
     rdfs:comment "Regulatory framework applicable to a device, such as MDR or IVDR."@en .
 
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Categoría de riesgo
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :RiskCategory
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Risk category"@en ;
     rdfs:comment "High-level category used to group risks, such as Device Failure or Patient Harm."@en .
 
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Tipo de riesgo
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :RiskType
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Risk type"@en ;
     rdfs:comment "Specific type of risk, such as MalfunctionRisk, InjuryRisk or DiagnosticRisk."@en .
 
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# SeverityLevel: cómo de severo es el riesgo
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :SeverityLevel
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Severity level"@en ;
     rdfs:comment "Controlled concept describing the severity of a risk."@en .
 
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Nivel de probabilidad
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :ProbabilityLevel
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Probability level"@en ;
     rdfs:comment "Controlled concept describing the probability of a risk."@en .
 
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Estado de acción (abierto/cerrado) sobre el ControlledVocabularyConcept
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :ActionStatus
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Action status"@en ;
     rdfs:comment "Controlled concept describing whether a field safety corrective action is open or closed."@en .
 
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# País 
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :Country
     rdf:type owl:Class ;
     rdfs:subClassOf :ControlledVocabularyConcept ;
     rdfs:label "Country"@en ;
     rdfs:comment "Country related to a manufacturer, reported incident or corrective action scope."@en .
 
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+# Autoridad competente
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 :CompetentAuthority
     rdf:type owl:Class ;
     rdfs:subClassOf :MedicalDeviceRiskEntity , prov:Agent ;
     rdfs:label "Competent authority"@en ;
     rdfs:comment "Regulatory authority responsible for medical device oversight in a country."@en .
 
+
+
+
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 #################################################################
 # MEDICAL DEVICE TAXONOMY
-# DRAW.IO / CHOWLK:
-# Estas clases salen de device_type, is_ivd, is_implantable,
-# is_active, is_reusable y regulatory_framework.
 #################################################################
+#.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+
 
 :MDRDevice
     rdf:type owl:Class ;
