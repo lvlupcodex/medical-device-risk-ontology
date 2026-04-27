@@ -1,0 +1,2025 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#"
+     xml:base="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-20</dcterms:created>
+        <dcterms:creator xml:lang="en">lvlupcodex</dcterms:creator>
+        <dcterms:description xml:lang="en">EN: Ontology for representing medical devices, manufacturers, risks, incidents and field safety corrective actions under MDR and IVDR.</dcterms:description>
+        <dcterms:title xml:lang="en">Medical Device Risk Ontology</dcterms:title>
+        <rdfs:comment xml:lang="en">This ontology models a European-style catalogue of medical devices, manufacturers, IMDRF risks, reported incidents and field safety corrective actions. It is designed as an application ontology for the PEC2 assignment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical Device Risk Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleText -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleText"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#addressesIncident -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#addressesIncident">
+        <owl:inverseOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCorrectiveAction"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:comment xml:lang="en">Relates a field safety corrective action to the incident it addresses.</rdfs:comment>
+        <rdfs:label xml:lang="en">addresses incident</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#concernsDevice -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#concernsDevice">
+        <owl:inverseOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasIncident"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the device involved in the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">concerns device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasActionStatus -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasActionStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActionStatus"/>
+        <rdfs:comment xml:lang="en">Relates a field safety corrective action to its current status.</rdfs:comment>
+        <rdfs:label xml:lang="en">has action status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCompetentAuthority -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCompetentAuthority">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Relates a manufacturer to the competent authority responsible for oversight.</rdfs:comment>
+        <rdfs:label xml:lang="en">has competent authority</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCorrectiveAction -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCorrectiveAction">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:comment xml:lang="en">Relates an incident to a field safety corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">has corrective action</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasIncident -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasIncident">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:comment xml:lang="en">Relates a medical device to an incident reported for it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has incident</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturer -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturer">
+        <owl:inverseOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturesDevice"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Relates a medical device to the manufacturer responsible for it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturerCountry -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturerCountry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country"/>
+        <rdfs:comment xml:lang="en">Relates a manufacturer to its country.</rdfs:comment>
+        <rdfs:label xml:lang="en">has manufacturer country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasProbability -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasProbability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel"/>
+        <rdfs:comment xml:lang="en">Relates a risk to its probability level.</rdfs:comment>
+        <rdfs:label xml:lang="en">has probability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasRiskClass -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasRiskClass">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">Relates a device to its regulatory risk class.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasSeverity -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasSeverity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel"/>
+        <rdfs:comment xml:lang="en">Relates a risk to its severity level.</rdfs:comment>
+        <rdfs:label xml:lang="en">has severity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#involvesRisk -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#involvesRisk">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the risk involved in the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">involves risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturesDevice -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturesDevice">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">Relates a manufacturer to a medical device manufactured by it.</rdfs:comment>
+        <rdfs:label xml:lang="en">manufactures device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#regulatedUnder -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#regulatedUnder">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework"/>
+        <rdfs:comment xml:lang="en">Relates a device to the regulatory framework under which it is registered.</rdfs:comment>
+        <rdfs:label xml:lang="en">regulated under</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedBy -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedBy">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the reporting manufacturer or entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">reported by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedInCountry -->
+
+    <owl:ObjectProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedInCountry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the country where it was reported.</rdfs:comment>
+        <rdfs:label xml:lang="en">reported in country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#actionDate -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#actionDate">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date on which the field safety corrective action started.</rdfs:comment>
+        <rdfs:label xml:lang="en">action date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#authorizationNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#authorizationNumber">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Manufacturer authorization number.</rdfs:comment>
+        <rdfs:label xml:lang="en">authorization number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#closureDate -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#closureDate">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date on which the field safety corrective action was closed, when available.</rdfs:comment>
+        <rdfs:label xml:lang="en">closure date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#contactEmail -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#contactEmail">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Regulatory contact email of the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">contact email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#correctiveActionTaken -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#correctiveActionTaken">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean value indicating whether a corrective action was taken for the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">corrective action taken</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#countriesAffected -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#countriesAffected">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual description of the countries affected by the field safety corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">countries affected</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#detectionDate -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#detectionDate">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date on which the incident was detected.</rdfs:comment>
+        <rdfs:label xml:lang="en">detection date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#deviceName -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#deviceName">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Literal name of the medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">device name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#devicesAffected -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#devicesAffected">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Number or description of devices affected by the field safety corrective action. It is modelled as string because some CSV values include units such as tests.</rdfs:comment>
+        <rdfs:label xml:lang="en">devices affected</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedFscaReference -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedFscaReference">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">EUDAMED-like reference identifier for the field safety corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">EUDAMED FSCA reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedIncidentReference -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedIncidentReference">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">EUDAMED-like reference identifier for the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">EUDAMED incident reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedSrn -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedSrn">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Single Registration Number used in EUDAMED-like contexts.</rdfs:comment>
+        <rdfs:label xml:lang="en">EUDAMED SRN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eventDate -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eventDate">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date on which the incident occurred.</rdfs:comment>
+        <rdfs:label xml:lang="en">event date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#fscaDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#fscaDescription">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual description of the field safety corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#imdrfCode -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#imdrfCode">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">IMDRF-inspired risk code.</rdfs:comment>
+        <rdfs:label xml:lang="en">IMDRF code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#incidentDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#incidentDescription">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Textual description of the reported incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#intendedPurpose -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#intendedPurpose">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Intended medical purpose of the device.</rdfs:comment>
+        <rdfs:label xml:lang="en">intended purpose</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isActive -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isActive">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean value indicating whether the device is active.</rdfs:comment>
+        <rdfs:label xml:lang="en">is active</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isIVD -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isIVD">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean value indicating whether the device is an in vitro diagnostic device.</rdfs:comment>
+        <rdfs:label xml:lang="en">is IVD</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isImplantable -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isImplantable">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean value indicating whether the device is implantable.</rdfs:comment>
+        <rdfs:label xml:lang="en">is implantable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isReusable -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isReusable">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean value indicating whether the device is reusable.</rdfs:comment>
+        <rdfs:label xml:lang="en">is reusable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturerName -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturerName">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">manufacturer name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#outcome -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#outcome">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Clinical, technical or regulatory outcome reported for an incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">outcome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientAge -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientAge">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Age of the patient involved in the incident, when available.</rdfs:comment>
+        <rdfs:label xml:lang="en">patient age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientSex -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientSex">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Sex of the patient involved in the incident, when available.</rdfs:comment>
+        <rdfs:label xml:lang="en">patient sex</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportDate -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportDate">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date on which the incident was reported.</rdfs:comment>
+        <rdfs:label xml:lang="en">report date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#riskName -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#riskName">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Human-readable name of the risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">risk name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#scope -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#scope">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Scope of the field safety corrective action, such as affected lots, models or versions.</rdfs:comment>
+        <rdfs:label xml:lang="en">scope</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#udiDi -->
+
+    <owl:DatatypeProperty rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#udiDi">
+        <rdfs:domain rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Unique Device Identification Device Identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">UDI-DI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/MedicalDevice -->
+
+    <owl:Class rdf:about="http://schema.org/MedicalDevice"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActionStatus -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActionStatus">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">Controlled concept describing whether a field safety corrective action is open or closed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Action status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">A device that depends on a source of energy for its operation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveImplant -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveImplant">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveDevice"/>
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableDevice"/>
+        <rdfs:comment xml:lang="en">An implantable device that depends on a source of energy for its operation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active implant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity"/>
+        <rdfs:comment xml:lang="en">Regulatory authority responsible for medical device oversight in a country.</rdfs:comment>
+        <rdfs:label xml:lang="en">Competent authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ContaminationRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ContaminationRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to contamination of reagents or medical products.</rdfs:comment>
+        <rdfs:label xml:lang="en">Contamination risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity"/>
+        <rdfs:comment xml:lang="en">A controlled concept used to normalize categorical values from the CSV files.</rdfs:comment>
+        <rdfs:label xml:lang="en">Controlled vocabulary concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CorrectedIncident -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CorrectedIncident">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:comment xml:lang="en">An incident for which a corrective action has been taken or is associated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Corrected incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">Country related to a manufacturer, reported incident or corrective action scope.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CybersecurityRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CybersecurityRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to exploitable cybersecurity vulnerabilities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cybersecurity risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DiagnosticRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DiagnosticRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to incorrect diagnostic results.</rdfs:comment>
+        <rdfs:label xml:lang="en">Diagnostic risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#addressesIncident"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A field safety corrective action, such as a recall, safety alert, user notice or in-situ correction, associated with an incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">Field safety corrective action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">An in vitro diagnostic medical device regulated under the In Vitro Diagnostic Regulation.</rdfs:comment>
+        <rdfs:label xml:lang="en">IVD device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableActiveDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableActiveDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveDevice"/>
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableDevice"/>
+        <rdfs:comment xml:lang="en">A device that is both implantable and active.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable active device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">A device intended to be totally or partially introduced into the human body.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable device</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Implant_(medicine)"/>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InSituCorrection -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InSituCorrection">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:comment xml:lang="en">A corrective action performed in the field without removing the device from use.</rdfs:comment>
+        <rdfs:label xml:lang="en">In-situ correction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InVitroDiagnosticDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InVitroDiagnosticDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDDevice"/>
+        <rdfs:comment xml:lang="en">A device intended for the examination of specimens derived from the human body for diagnostic purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">In vitro diagnostic device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#concernsDevice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#involvesRisk"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A reported event associated with a medical device, a risk and an outcome.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InfectionRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InfectionRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to infection associated with a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Infection risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InjuryRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InjuryRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to patient injury or harm.</rdfs:comment>
+        <rdfs:label xml:lang="en">Injury risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InterferenceRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InterferenceRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to electromagnetic or imaging interference.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interference risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDRDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDRDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">A medical device regulated under the Medical Device Regulation.</rdfs:comment>
+        <rdfs:label xml:lang="en">MDR device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MalfunctionRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MalfunctionRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to device malfunction or failure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Malfunction risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturerCountry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An organization responsible for manufacturing or placing a medical device on the market.</rdfs:comment>
+        <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MaterialRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MaterialRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to material wear, corrosion, particles or toxicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice">
+        <rdfs:subClassOf rdf:resource="http://schema.org/MedicalDevice"/>
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasRiskClass"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#regulatedUnder"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A medical device or in vitro diagnostic device represented in the catalogue and regulated under MDR or IVDR.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical device</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://schema.org/MedicalDevice"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Medical_device"/>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity">
+        <rdfs:comment xml:lang="en">Root class for all local entities defined in the medical device risk ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical device risk entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#NearMissIncident -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#NearMissIncident">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:comment xml:lang="en">An incident that did not result in harm but could have led to an adverse outcome.</rdfs:comment>
+        <rdfs:label xml:lang="en">Near-miss incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#PacemakerDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#PacemakerDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveImplant"/>
+        <rdfs:comment xml:lang="en">An active implantable device used for cardiac pacing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pacemaker device</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Artificial_cardiac_pacemaker"/>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">Controlled concept describing the probability of a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Probability level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RadiationRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RadiationRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to unintended or excessive radiation exposure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Radiation risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Recall -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Recall">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:comment xml:lang="en">A field safety corrective action involving removal, replacement or recall of affected devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">Regulatory framework applicable to a device, such as MDR or IVDR.</rdfs:comment>
+        <rdfs:label xml:lang="en">Regulatory framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ReusableDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ReusableDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">A device designed to be reused after appropriate reprocessing or maintenance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reusable device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasProbability"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasSeverity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A risk identified for a medical device according to a controlled risk terminology, such as IMDRF-inspired coding.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskCategory -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskCategory">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">High-level category used to group risks, such as Device Failure or Patient Harm.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">Regulatory risk class assigned to a device under MDR or IVDR.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskType -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskType">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">Specific type of risk, such as MalfunctionRisk, InjuryRisk or DiagnosticRisk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SafetyAlert -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SafetyAlert">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:comment xml:lang="en">A field safety corrective action based on a safety communication or alert.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety alert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SelfTestDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SelfTestDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDDevice"/>
+        <rdfs:comment xml:lang="en">An in vitro diagnostic device intended to be used by lay persons or patients.</rdfs:comment>
+        <rdfs:label xml:lang="en">Self-test device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident"/>
+        <rdfs:comment xml:lang="en">An incident that resulted, might have resulted or may result in serious patient harm or device malfunction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Serious incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept"/>
+        <rdfs:comment xml:lang="en">Controlled concept describing the severity of a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Severity level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SingleUseDevice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SingleUseDevice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">A device intended to be used once and not reprocessed for reuse.</rdfs:comment>
+        <rdfs:label xml:lang="en">Single-use device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SoftwareRisk -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SoftwareRisk">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk"/>
+        <rdfs:comment xml:lang="en">Risk related to software malfunction or incorrect software behavior.</rdfs:comment>
+        <rdfs:label xml:lang="en">Software risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#UserNotice -->
+
+    <owl:Class rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#UserNotice">
+        <rdfs:subClassOf rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction"/>
+        <rdfs:comment xml:lang="en">A notice issued to users or healthcare professionals about safe use of a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">User notice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ANSM -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ANSM">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">French competent authority for medicines and health products.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agence nationale de sécurité du médicament</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#BfArM -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#BfArM">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">German competent authority for drugs and medical devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bundesinstitut für Arzneimittel und Medizinprodukte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassA -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassA">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">IVDR risk class A.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class A</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class A</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassB -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassB">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">IVDR risk class B.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class B</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class B</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassC -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassC">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">IVDR risk class C.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class C</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class C</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassD -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassD">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">IVDR risk class D, usually associated with high-risk in vitro diagnostic devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class D</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class D</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassI -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassI">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">MDR risk class I.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class I</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIII -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIII">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">MDR risk class III, usually associated with high-risk medical devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class III</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class III</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIa -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIa">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">MDR risk class IIa.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class IIa</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class IIa</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIb -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIb">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass"/>
+        <rdfs:comment xml:lang="en">MDR risk class IIb.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class IIb</rdfs:label>
+        <skos:prefLabel xml:lang="en">Class IIb</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActionStatus"/>
+        <rdfs:comment xml:lang="en">Closed status for a field safety corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Closed</rdfs:label>
+        <skos:prefLabel xml:lang="en">Closed</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Critical -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Critical">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel"/>
+        <rdfs:comment xml:lang="en">Critical severity level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Critical</rdfs:label>
+        <skos:prefLabel xml:lang="en">Critical</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-001 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-001">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableActiveDevice"/>
+        <hasManufacturer rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001"/>
+        <hasRiskClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIII"/>
+        <regulatedUnder rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDR"/>
+        <deviceName>HeartMate 3 LVAD</deviceName>
+        <intendedPurpose>Ventricular assist device for end-stage heart failure</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDi>(01)00380740009095</udiDi>
+        <rdfs:comment xml:lang="en">Device instance from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">HeartMate 3 LVAD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-002 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-002">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveImplant"/>
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#PacemakerDevice"/>
+        <hasManufacturer rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001"/>
+        <hasRiskClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIII"/>
+        <regulatedUnder rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDR"/>
+        <deviceName>Micra AV Transcatheter Pacing System</deviceName>
+        <intendedPurpose>Leadless cardiac pacemaker for atrioventricular synchrony</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDi>(01)00380740009112</udiDi>
+        <rdfs:comment xml:lang="en">Device instance from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Micra AV Transcatheter Pacing System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-003 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-003">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableDevice"/>
+        <hasManufacturer rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-002"/>
+        <hasRiskClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIII"/>
+        <regulatedUnder rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDR"/>
+        <deviceName>Portico Transcatheter Heart Valve</deviceName>
+        <intendedPurpose>Transcatheter aortic valve replacement (TAVI)</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDi>(01)00800002222291</udiDi>
+        <rdfs:comment xml:lang="en">Device instance from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Portico Transcatheter Heart Valve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-016 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-016">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InVitroDiagnosticDevice"/>
+        <hasManufacturer rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005"/>
+        <hasRiskClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassC"/>
+        <regulatedUnder rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDR"/>
+        <deviceName>cobas e 801 Immunoassay Analyzer</deviceName>
+        <intendedPurpose>Automated immunoassay analyzer for clinical laboratory</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDi>(01)04015630001016</udiDi>
+        <rdfs:comment xml:lang="en">Device instance from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">cobas e 801 Immunoassay Analyzer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-017 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-017">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InVitroDiagnosticDevice"/>
+        <hasManufacturer rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005"/>
+        <hasRiskClass rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassC"/>
+        <regulatedUnder rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDR"/>
+        <deviceName>cobas SARS-CoV-2 RT-PCR Test</deviceName>
+        <intendedPurpose>Molecular diagnostic test for SARS-CoV-2 detection</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDi>(01)04015630001017</udiDi>
+        <rdfs:comment xml:lang="en">Device instance from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">cobas SARS-CoV-2 RT-PCR Test</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-001 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-001">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SafetyAlert"/>
+        <addressesIncident rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-001"/>
+        <hasActionStatus rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Open"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-01</actionDate>
+        <countriesAffected>EU-wide</countriesAffected>
+        <devicesAffected>850</devicesAffected>
+        <eudamedFscaReference>EU-FSCA-2024-000001</eudamedFscaReference>
+        <fscaDescription>Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk.</fscaDescription>
+        <scope>All HeartMate 3 LVAD units implanted since 2020</scope>
+        <rdfs:comment xml:lang="en">Field safety corrective action instance from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-001 HeartMate 3 safety alert</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-002 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-002">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Recall"/>
+        <addressesIncident rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-002"/>
+        <hasActionStatus rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-28</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-31</closureDate>
+        <countriesAffected>EU-wide + UK</countriesAffected>
+        <devicesAffected>1240</devicesAffected>
+        <eudamedFscaReference>EU-FSCA-2024-000002</eudamedFscaReference>
+        <fscaDescription>Voluntary recall of affected Micra AV lots due to premature battery depletion.</fscaDescription>
+        <scope>Micra AV lots manufactured between 2022-09 and 2023-03</scope>
+        <rdfs:comment xml:lang="en">Field safety corrective action instance from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-002 Micra AV recall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-003 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-003">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InSituCorrection"/>
+        <addressesIncident rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-003"/>
+        <hasActionStatus rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-15</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-30</closureDate>
+        <countriesAffected>EU-wide</countriesAffected>
+        <devicesAffected>320</devicesAffected>
+        <eudamedFscaReference>EU-FSCA-2024-000003</eudamedFscaReference>
+        <fscaDescription>Enhanced deployment training and updated IFU for Portico valve implantation technique.</fscaDescription>
+        <scope>Portico THV sizes 23mm and 25mm from lots before 2023-11</scope>
+        <rdfs:comment xml:lang="en">Field safety corrective action instance from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-003 Portico valve in-situ correction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-009 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-009">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#UserNotice"/>
+        <addressesIncident rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-011"/>
+        <hasActionStatus rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-20</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</closureDate>
+        <countriesAffected>EU-wide</countriesAffected>
+        <devicesAffected>620</devicesAffected>
+        <eudamedFscaReference>EU-FSCA-2024-000009</eudamedFscaReference>
+        <fscaDescription>Customer field notification regarding biotin interference in TSH assay.</fscaDescription>
+        <scope>All cobas e 801 immunoassay analysers</scope>
+        <rdfs:comment xml:lang="en">Field safety corrective action instance from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-009 cobas e 801 user notice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-010 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-010">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Recall"/>
+        <addressesIncident rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-012"/>
+        <hasActionStatus rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-30</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-31</closureDate>
+        <countriesAffected>EU-wide + Norway + Iceland</countriesAffected>
+        <devicesAffected>12500 tests</devicesAffected>
+        <eudamedFscaReference>EU-FSCA-2024-000010</eudamedFscaReference>
+        <fscaDescription>Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued.</fscaDescription>
+        <scope>cobas SARS-CoV-2 RT-PCR reagent lot numbers CV-2024-0312 to CV-2024-0318</scope>
+        <rdfs:comment xml:lang="en">Field safety corrective action instance from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-010 cobas SARS-CoV-2 reagent recall</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#France -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#France">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country"/>
+        <rdfs:comment xml:lang="en">Country individual representing France.</rdfs:comment>
+        <rdfs:label xml:lang="en">France</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/France"/>
+        <skos:prefLabel xml:lang="en">France</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country"/>
+        <rdfs:comment xml:lang="en">Country individual representing Germany.</rdfs:comment>
+        <rdfs:label xml:lang="en">Germany</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Germany"/>
+        <skos:prefLabel xml:lang="en">Germany</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#HPRA -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#HPRA">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Irish competent authority for health products.</rdfs:comment>
+        <rdfs:label xml:lang="en">Health Products Regulatory Authority</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#High -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#High">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel"/>
+        <rdfs:comment xml:lang="en">High probability level.</rdfs:comment>
+        <rdfs:label xml:lang="en">High</rdfs:label>
+        <skos:prefLabel xml:lang="en">High</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-001 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-001">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident"/>
+        <concernsDevice rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-001"/>
+        <hasCorrectiveAction rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-001"/>
+        <involvesRisk rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-003"/>
+        <reportedBy rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001"/>
+        <reportedInCountry rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <detectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-10</detectionDate>
+        <eudamedIncidentReference>EU-INC-2024-000001</eudamedIncidentReference>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-08</eventDate>
+        <incidentDescription>Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography.</incidentDescription>
+        <outcome>Serious patient injury - embolic stroke</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-15</reportDate>
+        <rdfs:comment xml:lang="en">Incident instance from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-001 HeartMate 3 LVAD thrombosis incident</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-002 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-002">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident"/>
+        <concernsDevice rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-002"/>
+        <hasCorrectiveAction rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-002"/>
+        <involvesRisk rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-009"/>
+        <reportedBy rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001"/>
+        <reportedInCountry rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#France"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <detectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-01</detectionDate>
+        <eudamedIncidentReference>EU-INC-2024-000002</eudamedIncidentReference>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-29</eventDate>
+        <incidentDescription>Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification.</incidentDescription>
+        <outcome>Device malfunction - premature battery depletion</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-03</reportDate>
+        <rdfs:comment xml:lang="en">Incident instance from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-002 Micra AV battery incident</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-003 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-003">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident"/>
+        <concernsDevice rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-003"/>
+        <hasCorrectiveAction rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-003"/>
+        <involvesRisk rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-005"/>
+        <reportedBy rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-002"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <detectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-18</detectionDate>
+        <eudamedIncidentReference>EU-INC-2024-000003</eudamedIncidentReference>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-15</eventDate>
+        <incidentDescription>Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure.</incidentDescription>
+        <outcome>Surgical intervention required - valve re-anchoring</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-20</reportDate>
+        <rdfs:comment xml:lang="en">Incident instance from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-003 Portico valve migration incident</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-011 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-011">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident"/>
+        <concernsDevice rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-016"/>
+        <hasCorrectiveAction rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-009"/>
+        <involvesRisk rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-014"/>
+        <reportedBy rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005"/>
+        <reportedInCountry rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#France"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <detectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-01</detectionDate>
+        <eudamedIncidentReference>EU-INC-2024-000011</eudamedIncidentReference>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-28</eventDate>
+        <incidentDescription>cobas e 801 thyroid-stimulating hormone assay reported false positive results in 12 euthyroid patients due to biotin interference.</incidentDescription>
+        <outcome>Diagnostic error - false positive TSH results</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-03</reportDate>
+        <rdfs:comment xml:lang="en">Incident instance from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-011 cobas e 801 false positive TSH incident</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-012 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-012">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident"/>
+        <concernsDevice rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-017"/>
+        <hasCorrectiveAction rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-010"/>
+        <involvesRisk rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-015"/>
+        <reportedBy rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <detectionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-13</detectionDate>
+        <eudamedIncidentReference>EU-INC-2024-000012</eudamedIncidentReference>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-10</eventDate>
+        <incidentDescription>cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing.</incidentDescription>
+        <outcome>Diagnostic error - false negative SARS-CoV-2</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-15</reportDate>
+        <rdfs:comment xml:lang="en">Incident instance from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-012 cobas SARS-CoV-2 false negative incident</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDR -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDR">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework"/>
+        <rdfs:comment xml:lang="en">In Vitro Diagnostic Regulation framework.</rdfs:comment>
+        <rdfs:label xml:lang="en">IVDR</rdfs:label>
+        <skos:definition xml:lang="en">Regulatory framework for in vitro diagnostic medical devices.</skos:definition>
+        <skos:prefLabel xml:lang="en">IVDR</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Ireland -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Ireland">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country"/>
+        <rdfs:comment xml:lang="en">Country individual representing Ireland.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ireland</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Republic_of_Ireland"/>
+        <skos:prefLabel xml:lang="en">Ireland</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel"/>
+        <rdfs:comment xml:lang="en">Low probability level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Low</rdfs:label>
+        <skos:prefLabel xml:lang="en">Low</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/entity/Q849415"/>
+        <hasCompetentAuthority rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#HPRA"/>
+        <hasManufacturerCountry rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Ireland"/>
+        <authorizationNumber>IE/2017/001234</authorizationNumber>
+        <contactEmail>regulatory@medtronic.com</contactEmail>
+        <eudamedSrn>SRN-IE-MED-0001</eudamedSrn>
+        <manufacturerName>Medtronic plc</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer instance from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medtronic plc</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Medtronic"/>
+        <foaf:mbox rdf:resource="mailto:regulatory@medtronic.com"/>
+        <foaf:name xml:lang="en">Medtronic plc</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/entity/Q849415 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/entity/Q849415"/>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-002 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-002">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/entity/Q162240"/>
+        <hasCompetentAuthority rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#BfArM"/>
+        <hasManufacturerCountry rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany"/>
+        <authorizationNumber>DE/2017/005678</authorizationNumber>
+        <contactEmail>regulatory@abbott.com</contactEmail>
+        <eudamedSrn>SRN-DE-MED-0002</eudamedSrn>
+        <manufacturerName>Abbott Medical Devices</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer instance from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Abbott Medical Devices</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Abbott_Laboratories"/>
+        <foaf:mbox rdf:resource="mailto:regulatory@abbott.com"/>
+        <foaf:name xml:lang="en">Abbott Medical Devices</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/entity/Q162240 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/entity/Q162240"/>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-003 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-003">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <owl:sameAs rdf:resource="https://www.wikidata.org/entity/Q50021842"/>
+        <hasCompetentAuthority rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#BfArM"/>
+        <hasManufacturerCountry rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany"/>
+        <authorizationNumber>DE/2017/009012</authorizationNumber>
+        <contactEmail>regulatory@siemens-healthineers.com</contactEmail>
+        <eudamedSrn>SRN-DE-MED-0003</eudamedSrn>
+        <manufacturerName>Siemens Healthineers AG</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer instance from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Siemens Healthineers AG</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Siemens_Healthineers"/>
+        <foaf:mbox rdf:resource="mailto:regulatory@siemens-healthineers.com"/>
+        <foaf:name xml:lang="en">Siemens Healthineers AG</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/entity/Q50021842 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/entity/Q50021842"/>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer"/>
+        <hasCompetentAuthority rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#BfArM"/>
+        <hasManufacturerCountry rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany"/>
+        <authorizationNumber>DE/2017/007890</authorizationNumber>
+        <contactEmail>regulatory@roche.com</contactEmail>
+        <eudamedSrn>SRN-DE-MED-0005</eudamedSrn>
+        <manufacturerName>Roche Diagnostics GmbH</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer instance from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Roche Diagnostics GmbH</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Hoffmann-La_Roche"/>
+        <foaf:mbox rdf:resource="mailto:regulatory@roche.com"/>
+        <foaf:name xml:lang="en">Roche Diagnostics GmbH</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDR -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDR">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework"/>
+        <rdfs:comment xml:lang="en">Medical Device Regulation framework.</rdfs:comment>
+        <rdfs:label xml:lang="en">MDR</rdfs:label>
+        <skos:definition xml:lang="en">Regulatory framework for medical devices.</skos:definition>
+        <skos:prefLabel xml:lang="en">MDR</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Medium -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Medium">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel"/>
+        <rdfs:comment xml:lang="en">Medium probability level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
+        <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Moderate -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Moderate">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel"/>
+        <rdfs:comment xml:lang="en">Moderate severity level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Moderate</rdfs:label>
+        <skos:prefLabel xml:lang="en">Moderate</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Netherlands -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Netherlands">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country"/>
+        <rdfs:comment xml:lang="en">Country individual representing the Netherlands.</rdfs:comment>
+        <rdfs:label xml:lang="en">Netherlands</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Netherlands"/>
+        <skos:prefLabel xml:lang="en">Netherlands</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Open -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Open">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActionStatus"/>
+        <rdfs:comment xml:lang="en">Open status for a field safety corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">Open</rdfs:label>
+        <skos:prefLabel xml:lang="en">Open</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RIVM -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RIVM">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Dutch public health and environment institute acting as competent authority in the provided data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rijksinstituut voor Volksgezondheid en Milieu</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-003 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-003">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InjuryRisk"/>
+        <hasProbability rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low"/>
+        <hasSeverity rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Critical"/>
+        <imdrfCode>A0201</imdrfCode>
+        <riskName>Thrombosis - device-related</riskName>
+        <rdfs:comment xml:lang="en">Risk instance from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Thrombosis - device-related</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-005 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-005">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MalfunctionRisk"/>
+        <hasProbability rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low"/>
+        <hasSeverity rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Serious"/>
+        <imdrfCode>A0301</imdrfCode>
+        <riskName>Device migration - implant</riskName>
+        <rdfs:comment xml:lang="en">Risk instance from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device migration - implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-009 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-009">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MalfunctionRisk"/>
+        <hasProbability rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low"/>
+        <hasSeverity rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Critical"/>
+        <imdrfCode>A0501</imdrfCode>
+        <riskName>Battery depletion - premature</riskName>
+        <rdfs:comment xml:lang="en">Risk instance from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Battery depletion - premature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-014 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-014">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DiagnosticRisk"/>
+        <hasProbability rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Medium"/>
+        <hasSeverity rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Serious"/>
+        <imdrfCode>B0101</imdrfCode>
+        <riskName>False positive result</riskName>
+        <rdfs:comment xml:lang="en">Risk instance from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">False positive result</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-015 -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-015">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DiagnosticRisk"/>
+        <hasProbability rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low"/>
+        <hasSeverity rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Critical"/>
+        <imdrfCode>B0102</imdrfCode>
+        <riskName>False negative result</riskName>
+        <rdfs:comment xml:lang="en">Risk instance from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">False negative result</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Serious -->
+
+    <owl:NamedIndividual rdf:about="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Serious">
+        <rdf:type rdf:resource="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel"/>
+        <rdfs:comment xml:lang="en">Serious severity level.</rdfs:comment>
+        <rdfs:label xml:lang="en">Serious</rdfs:label>
+        <skos:prefLabel xml:lang="en">Serious</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/entity/Q162240 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/entity/Q162240"/>
+    
+
+
+    <!-- https://www.wikidata.org/entity/Q50021842 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/entity/Q50021842"/>
+    
+
+
+    <!-- https://www.wikidata.org/entity/Q849415 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/entity/Q849415"/>
+    <rdf:Description>
+        <swrla:hasRuleText xml:lang="en">Incident(?i), hasCorrectiveAction(?i, ?f) -&gt; CorrectedIncident(?i)</swrla:hasRuleText>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:hasRuleText xml:lang="en">MedicalDevice(?d), regulatedUnder(?d, MDR) -&gt; MDRDevice(?d)</swrla:hasRuleText>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:hasRuleText xml:lang="en">MedicalDevice(?d), regulatedUnder(?d, IVDR) -&gt; IVDDevice(?d)</swrla:hasRuleText>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">SWRL rule: Incident(?i) and hasCorrectiveAction(?i,?f) imply CorrectedIncident(?i).</rdfs:comment>
+        <rdfs:label xml:lang="en">Infer corrected incident from corrective action</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <swrl:head rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">SWRL rule: MedicalDevice(?d) and regulatedUnder(?d, IVDR) imply IVDDevice(?d).</rdfs:comment>
+        <rdfs:label xml:lang="en">Infer IVD device from IVDR framework</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <swrl:head rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">SWRL rule: MedicalDevice(?d) and regulatedUnder(?d, MDR) imply MDRDevice(?d).</rdfs:comment>
+        <rdfs:label xml:lang="en">Infer MDR device from MDR framework</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <swrl:head rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

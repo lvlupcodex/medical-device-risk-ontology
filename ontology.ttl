@@ -10,6 +10,8 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+
 
 
 
@@ -30,7 +32,8 @@
     dcterms:creator "lvlupcodex"@en ;
     dcterms:created "2026-04-20"^^xsd:date ;
     rdfs:label "Medical Device Risk Ontology"@en ;
-    rdfs:comment "This ontology models a European-style catalogue of medical devices, manufacturers, IMDRF risks, reported incidents and field safety corrective actions. It is designed as an application ontology for the PEC2 assignment."@en .
+    rdfs:comment "This ontology models a European-style catalogue of medical devices, manufacturers, IMDRF risks, reported incidents and field safety corrective actions. It is designed as an application ontology for the PEC2 assignment."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
 
 
@@ -49,6 +52,31 @@
 #################################################################
 #.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
+
+schema:MedicalDevice
+    rdf:type owl:Class ;
+    rdfs:label "Medical Device"@en ;
+    rdfs:comment "External class from schema.org representing a medical device. Used as superclass of the local MedicalDevice class."@en .
+
+foaf:Organization
+    rdf:type owl:Class ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "External class from FOAF representing an organization. Used as superclass of the local Manufacturer class."@en .
+
+skos:Concept
+    rdf:type owl:Class ;
+    rdfs:label "Concept"@en ;
+    rdfs:comment "External class from SKOS representing a concept in a controlled vocabulary. Used as superclass of ControlledVocabularyConcept."@en .
+
+prov:Agent
+    rdf:type owl:Class ;
+    rdfs:label "Agent"@en ;
+    rdfs:comment "External class from PROV-O representing an agent that can act. Used as superclass of the local CompetentAuthority class."@en .
+
+swrl:Imp
+    rdf:type owl:Class ;
+    rdfs:label "SWRL Implication"@en ;
+    rdfs:comment "SWRL vocabulary class representing an implication rule. Declared here to satisfy OWL class typing requirements."@en .
 
 
 
@@ -269,12 +297,14 @@
 :MDRDevice
     rdf:type owl:Class ;
     rdfs:subClassOf :MedicalDevice ;
+    owl:disjointWith :IVDDevice ;
     rdfs:label "MDR device"@en ;
     rdfs:comment "A medical device regulated under the Medical Device Regulation."@en .
 
 :IVDDevice
     rdf:type owl:Class ;
     rdfs:subClassOf :MedicalDevice ;
+    owl:disjointWith :MDRDevice ;
     rdfs:label "IVD device"@en ;
     rdfs:comment "An in vitro diagnostic medical device regulated under the In Vitro Diagnostic Regulation."@en .
 
@@ -409,12 +439,14 @@
 :SeriousIncident
     rdf:type owl:Class ;
     rdfs:subClassOf :Incident ;
+    owl:disjointWith :NearMissIncident ;
     rdfs:label "Serious incident"@en ;
     rdfs:comment "An incident that resulted, might have resulted or may result in serious patient harm or device malfunction."@en .
 
 :NearMissIncident
     rdf:type owl:Class ;
     rdfs:subClassOf :Incident ;
+    owl:disjointWith :SeriousIncident ;
     rdfs:label "Near-miss incident"@en ;
     rdfs:comment "An incident that did not result in harm but could have led to an adverse outcome."@en .
 
@@ -1052,13 +1084,14 @@
     rdfs:comment "Manufacturer instance from fabricantes.csv."@en ;
     foaf:name "Medtronic plc"@en ;
     foaf:mbox <mailto:regulatory@medtronic.com> ;
-    :manufacturerName "Medtronic plc" ;
-    :authorizationNumber "IE/2017/001234" ;
-    :contactEmail "regulatory@medtronic.com" ;
-    :eudamedSrn "SRN-IE-MED-0001" ;
+    :manufacturerName "Medtronic plc"^^xsd:string ;
+    :authorizationNumber "IE/2017/001234"^^xsd:string ;
+    :contactEmail "regulatory@medtronic.com"^^xsd:string ;
+    :eudamedSrn "SRN-IE-MED-0001"^^xsd:string ;
     :hasManufacturerCountry :Ireland ;
     :hasCompetentAuthority :HPRA ;
-    rdfs:seeAlso <https://dbpedia.org/resource/Medtronic> .
+    rdfs:seeAlso <https://dbpedia.org/resource/Medtronic> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q849415> .
 
 :MAN-002
     rdf:type owl:NamedIndividual , :Manufacturer ;
@@ -1066,13 +1099,14 @@
     rdfs:comment "Manufacturer instance from fabricantes.csv."@en ;
     foaf:name "Abbott Medical Devices"@en ;
     foaf:mbox <mailto:regulatory@abbott.com> ;
-    :manufacturerName "Abbott Medical Devices" ;
-    :authorizationNumber "DE/2017/005678" ;
-    :contactEmail "regulatory@abbott.com" ;
-    :eudamedSrn "SRN-DE-MED-0002" ;
+    :manufacturerName "Abbott Medical Devices"^^xsd:string ;
+    :authorizationNumber "DE/2017/005678"^^xsd:string ;
+    :contactEmail "regulatory@abbott.com"^^xsd:string ;
+    :eudamedSrn "SRN-DE-MED-0002"^^xsd:string ;
     :hasManufacturerCountry :Germany ;
     :hasCompetentAuthority :BfArM ;
-    rdfs:seeAlso <https://dbpedia.org/resource/Abbott_Laboratories> .
+    rdfs:seeAlso <https://dbpedia.org/resource/Abbott_Laboratories> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q162240> .
 
 :MAN-003
     rdf:type owl:NamedIndividual , :Manufacturer ;
@@ -1080,13 +1114,14 @@
     rdfs:comment "Manufacturer instance from fabricantes.csv."@en ;
     foaf:name "Siemens Healthineers AG"@en ;
     foaf:mbox <mailto:regulatory@siemens-healthineers.com> ;
-    :manufacturerName "Siemens Healthineers AG" ;
-    :authorizationNumber "DE/2017/009012" ;
-    :contactEmail "regulatory@siemens-healthineers.com" ;
-    :eudamedSrn "SRN-DE-MED-0003" ;
+    :manufacturerName "Siemens Healthineers AG"^^xsd:string ;
+    :authorizationNumber "DE/2017/009012"^^xsd:string ;
+    :contactEmail "regulatory@siemens-healthineers.com"^^xsd:string ;
+    :eudamedSrn "SRN-DE-MED-0003"^^xsd:string ;
     :hasManufacturerCountry :Germany ;
     :hasCompetentAuthority :BfArM ;
-    rdfs:seeAlso <https://dbpedia.org/resource/Siemens_Healthineers> .
+    rdfs:seeAlso <https://dbpedia.org/resource/Siemens_Healthineers> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q50021842> .
 
 :MAN-005
     rdf:type owl:NamedIndividual , :Manufacturer ;
@@ -1094,10 +1129,10 @@
     rdfs:comment "Manufacturer instance from fabricantes.csv."@en ;
     foaf:name "Roche Diagnostics GmbH"@en ;
     foaf:mbox <mailto:regulatory@roche.com> ;
-    :manufacturerName "Roche Diagnostics GmbH" ;
-    :authorizationNumber "DE/2017/007890" ;
-    :contactEmail "regulatory@roche.com" ;
-    :eudamedSrn "SRN-DE-MED-0005" ;
+    :manufacturerName "Roche Diagnostics GmbH"^^xsd:string ;
+    :authorizationNumber "DE/2017/007890"^^xsd:string ;
+    :contactEmail "regulatory@roche.com"^^xsd:string ;
+    :eudamedSrn "SRN-DE-MED-0005"^^xsd:string ;
     :hasManufacturerCountry :Germany ;
     :hasCompetentAuthority :BfArM ;
     rdfs:seeAlso <https://dbpedia.org/resource/Hoffmann-La_Roche> .
@@ -1114,13 +1149,13 @@
     rdf:type owl:NamedIndividual , :ImplantableActiveDevice ;
     rdfs:label "HeartMate 3 LVAD"@en ;
     rdfs:comment "Device instance from dispositivos.csv."@en ;
-    :deviceName "HeartMate 3 LVAD" ;
-    :udiDi "(01)00380740009095" ;
-    :intendedPurpose "Ventricular assist device for end-stage heart failure" ;
-    :isIVD false ;
-    :isImplantable true ;
-    :isActive true ;
-    :isReusable false ;
+    :deviceName "HeartMate 3 LVAD"^^xsd:string ;
+    :udiDi "(01)00380740009095"^^xsd:string ;
+    :intendedPurpose "Ventricular assist device for end-stage heart failure"^^xsd:string ;
+    :isIVD "false"^^xsd:boolean ;
+    :isImplantable "true"^^xsd:boolean ;
+    :isActive "true"^^xsd:boolean ;
+    :isReusable "false"^^xsd:boolean ;
     :hasManufacturer :MAN-001 ;
     :hasRiskClass :ClassIII ;
     :regulatedUnder :MDR .
@@ -1129,13 +1164,13 @@
     rdf:type owl:NamedIndividual , :ActiveImplant , :PacemakerDevice ;
     rdfs:label "Micra AV Transcatheter Pacing System"@en ;
     rdfs:comment "Device instance from dispositivos.csv."@en ;
-    :deviceName "Micra AV Transcatheter Pacing System" ;
-    :udiDi "(01)00380740009112" ;
-    :intendedPurpose "Leadless cardiac pacemaker for atrioventricular synchrony" ;
-    :isIVD false ;
-    :isImplantable true ;
-    :isActive true ;
-    :isReusable false ;
+    :deviceName "Micra AV Transcatheter Pacing System"^^xsd:string ;
+    :udiDi "(01)00380740009112"^^xsd:string ;
+    :intendedPurpose "Leadless cardiac pacemaker for atrioventricular synchrony"^^xsd:string ;
+    :isIVD "false"^^xsd:boolean ;
+    :isImplantable "true"^^xsd:boolean ;
+    :isActive "true"^^xsd:boolean ;
+    :isReusable "false"^^xsd:boolean ;
     :hasManufacturer :MAN-001 ;
     :hasRiskClass :ClassIII ;
     :regulatedUnder :MDR .
@@ -1144,13 +1179,13 @@
     rdf:type owl:NamedIndividual , :ImplantableDevice ;
     rdfs:label "Portico Transcatheter Heart Valve"@en ;
     rdfs:comment "Device instance from dispositivos.csv."@en ;
-    :deviceName "Portico Transcatheter Heart Valve" ;
-    :udiDi "(01)00800002222291" ;
-    :intendedPurpose "Transcatheter aortic valve replacement (TAVI)" ;
-    :isIVD false ;
-    :isImplantable true ;
-    :isActive false ;
-    :isReusable false ;
+    :deviceName "Portico Transcatheter Heart Valve"^^xsd:string ;
+    :udiDi "(01)00800002222291"^^xsd:string ;
+    :intendedPurpose "Transcatheter aortic valve replacement (TAVI)"^^xsd:string ;
+    :isIVD "false"^^xsd:boolean ;
+    :isImplantable "true"^^xsd:boolean ;
+    :isActive "false"^^xsd:boolean ;
+    :isReusable "false"^^xsd:boolean ;
     :hasManufacturer :MAN-002 ;
     :hasRiskClass :ClassIII ;
     :regulatedUnder :MDR .
@@ -1159,13 +1194,13 @@
     rdf:type owl:NamedIndividual , :InVitroDiagnosticDevice ;
     rdfs:label "cobas e 801 Immunoassay Analyzer"@en ;
     rdfs:comment "Device instance from dispositivos.csv."@en ;
-    :deviceName "cobas e 801 Immunoassay Analyzer" ;
-    :udiDi "(01)04015630001016" ;
-    :intendedPurpose "Automated immunoassay analyzer for clinical laboratory" ;
-    :isIVD true ;
-    :isImplantable false ;
-    :isActive true ;
-    :isReusable true ;
+    :deviceName "cobas e 801 Immunoassay Analyzer"^^xsd:string ;
+    :udiDi "(01)04015630001016"^^xsd:string ;
+    :intendedPurpose "Automated immunoassay analyzer for clinical laboratory"^^xsd:string ;
+    :isIVD "true"^^xsd:boolean ;
+    :isImplantable "false"^^xsd:boolean ;
+    :isActive "true"^^xsd:boolean ;
+    :isReusable "true"^^xsd:boolean ;
     :hasManufacturer :MAN-005 ;
     :hasRiskClass :ClassC ;
     :regulatedUnder :IVDR .
@@ -1174,13 +1209,13 @@
     rdf:type owl:NamedIndividual , :InVitroDiagnosticDevice ;
     rdfs:label "cobas SARS-CoV-2 RT-PCR Test"@en ;
     rdfs:comment "Device instance from dispositivos.csv."@en ;
-    :deviceName "cobas SARS-CoV-2 RT-PCR Test" ;
-    :udiDi "(01)04015630001017" ;
-    :intendedPurpose "Molecular diagnostic test for SARS-CoV-2 detection" ;
-    :isIVD true ;
-    :isImplantable false ;
-    :isActive false ;
-    :isReusable false ;
+    :deviceName "cobas SARS-CoV-2 RT-PCR Test"^^xsd:string ;
+    :udiDi "(01)04015630001017"^^xsd:string ;
+    :intendedPurpose "Molecular diagnostic test for SARS-CoV-2 detection"^^xsd:string ;
+    :isIVD "true"^^xsd:boolean ;
+    :isImplantable "false"^^xsd:boolean ;
+    :isActive "false"^^xsd:boolean ;
+    :isReusable "false"^^xsd:boolean ;
     :hasManufacturer :MAN-005 ;
     :hasRiskClass :ClassC ;
     :regulatedUnder :IVDR .
@@ -1195,8 +1230,8 @@
     rdf:type owl:NamedIndividual , :InjuryRisk ;
     rdfs:label "Thrombosis - device-related"@en ;
     rdfs:comment "Risk instance from riesgos.csv."@en ;
-    :imdrfCode "A0201" ;
-    :riskName "Thrombosis - device-related" ;
+    :imdrfCode "A0201"^^xsd:string ;
+    :riskName "Thrombosis - device-related"^^xsd:string ;
     :hasSeverity :Critical ;
     :hasProbability :Low .
 
@@ -1204,8 +1239,8 @@
     rdf:type owl:NamedIndividual , :MalfunctionRisk ;
     rdfs:label "Device migration - implant"@en ;
     rdfs:comment "Risk instance from riesgos.csv."@en ;
-    :imdrfCode "A0301" ;
-    :riskName "Device migration - implant" ;
+    :imdrfCode "A0301"^^xsd:string ;
+    :riskName "Device migration - implant"^^xsd:string ;
     :hasSeverity :Serious ;
     :hasProbability :Low .
 
@@ -1213,8 +1248,8 @@
     rdf:type owl:NamedIndividual , :MalfunctionRisk ;
     rdfs:label "Battery depletion - premature"@en ;
     rdfs:comment "Risk instance from riesgos.csv."@en ;
-    :imdrfCode "A0501" ;
-    :riskName "Battery depletion - premature" ;
+    :imdrfCode "A0501"^^xsd:string ;
+    :riskName "Battery depletion - premature"^^xsd:string ;
     :hasSeverity :Critical ;
     :hasProbability :Low .
 
@@ -1222,8 +1257,8 @@
     rdf:type owl:NamedIndividual , :DiagnosticRisk ;
     rdfs:label "False positive result"@en ;
     rdfs:comment "Risk instance from riesgos.csv."@en ;
-    :imdrfCode "B0101" ;
-    :riskName "False positive result" ;
+    :imdrfCode "B0101"^^xsd:string ;
+    :riskName "False positive result"^^xsd:string ;
     :hasSeverity :Serious ;
     :hasProbability :Medium .
 
@@ -1231,8 +1266,8 @@
     rdf:type owl:NamedIndividual , :DiagnosticRisk ;
     rdfs:label "False negative result"@en ;
     rdfs:comment "Risk instance from riesgos.csv."@en ;
-    :imdrfCode "B0102" ;
-    :riskName "False negative result" ;
+    :imdrfCode "B0102"^^xsd:string ;
+    :riskName "False negative result"^^xsd:string ;
     :hasSeverity :Critical ;
     :hasProbability :Low .
 
@@ -1253,12 +1288,12 @@
     :reportDate "2024-01-15"^^xsd:date ;
     :detectionDate "2024-01-10"^^xsd:date ;
     :eventDate "2024-01-08"^^xsd:date ;
-    :outcome "Serious patient injury - embolic stroke" ;
+    :outcome "Serious patient injury - embolic stroke"^^xsd:string ;
     :patientAge 58 ;
-    :patientSex "Male" ;
-    :eudamedIncidentReference "EU-INC-2024-000001" ;
-    :incidentDescription "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography." ;
-    :correctiveActionTaken true .
+    :patientSex "Male"^^xsd:string ;
+    :eudamedIncidentReference "EU-INC-2024-000001"^^xsd:string ;
+    :incidentDescription "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography."^^xsd:string ;
+    :correctiveActionTaken "true"^^xsd:boolean .
 
 :INC-002
     rdf:type owl:NamedIndividual , :SeriousIncident ;
@@ -1271,12 +1306,12 @@
     :reportDate "2024-02-03"^^xsd:date ;
     :detectionDate "2024-02-01"^^xsd:date ;
     :eventDate "2024-01-29"^^xsd:date ;
-    :outcome "Device malfunction - premature battery depletion" ;
+    :outcome "Device malfunction - premature battery depletion"^^xsd:string ;
     :patientAge 72 ;
-    :patientSex "Female" ;
-    :eudamedIncidentReference "EU-INC-2024-000002" ;
-    :incidentDescription "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification." ;
-    :correctiveActionTaken true .
+    :patientSex "Female"^^xsd:string ;
+    :eudamedIncidentReference "EU-INC-2024-000002"^^xsd:string ;
+    :incidentDescription "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification."^^xsd:string ;
+    :correctiveActionTaken "true"^^xsd:boolean .
 
 :INC-003
     rdf:type owl:NamedIndividual , :SeriousIncident ;
@@ -1288,12 +1323,12 @@
     :reportDate "2024-02-20"^^xsd:date ;
     :detectionDate "2024-02-18"^^xsd:date ;
     :eventDate "2024-02-15"^^xsd:date ;
-    :outcome "Surgical intervention required - valve re-anchoring" ;
+    :outcome "Surgical intervention required - valve re-anchoring"^^xsd:string ;
     :patientAge 67 ;
-    :patientSex "Male" ;
-    :eudamedIncidentReference "EU-INC-2024-000003" ;
-    :incidentDescription "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure." ;
-    :correctiveActionTaken true .
+    :patientSex "Male"^^xsd:string ;
+    :eudamedIncidentReference "EU-INC-2024-000003"^^xsd:string ;
+    :incidentDescription "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure."^^xsd:string ;
+    :correctiveActionTaken "true"^^xsd:boolean .
 
 :INC-011
     rdf:type owl:NamedIndividual , :SeriousIncident ;
@@ -1306,10 +1341,10 @@
     :reportDate "2024-06-03"^^xsd:date ;
     :detectionDate "2024-06-01"^^xsd:date ;
     :eventDate "2024-05-28"^^xsd:date ;
-    :outcome "Diagnostic error - false positive TSH results" ;
-    :eudamedIncidentReference "EU-INC-2024-000011" ;
-    :incidentDescription "cobas e 801 thyroid-stimulating hormone assay reported false positive results in 12 euthyroid patients due to biotin interference." ;
-    :correctiveActionTaken true .
+    :outcome "Diagnostic error - false positive TSH results"^^xsd:string ;
+    :eudamedIncidentReference "EU-INC-2024-000011"^^xsd:string ;
+    :incidentDescription "cobas e 801 thyroid-stimulating hormone assay reported false positive results in 12 euthyroid patients due to biotin interference."^^xsd:string ;
+    :correctiveActionTaken "true"^^xsd:boolean .
 
 :INC-012
     rdf:type owl:NamedIndividual , :SeriousIncident ;
@@ -1321,10 +1356,10 @@
     :reportDate "2024-06-15"^^xsd:date ;
     :detectionDate "2024-06-13"^^xsd:date ;
     :eventDate "2024-06-10"^^xsd:date ;
-    :outcome "Diagnostic error - false negative SARS-CoV-2" ;
-    :eudamedIncidentReference "EU-INC-2024-000012" ;
-    :incidentDescription "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing." ;
-    :correctiveActionTaken true .
+    :outcome "Diagnostic error - false negative SARS-CoV-2"^^xsd:string ;
+    :eudamedIncidentReference "EU-INC-2024-000012"^^xsd:string ;
+    :incidentDescription "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing."^^xsd:string ;
+    :correctiveActionTaken "true"^^xsd:boolean .
 
 #################################################################
 # FSCA INSTANCES
@@ -1339,11 +1374,11 @@
     :addressesIncident :INC-001 ;
     :hasActionStatus :Open ;
     :actionDate "2024-02-01"^^xsd:date ;
-    :scope "All HeartMate 3 LVAD units implanted since 2020" ;
-    :devicesAffected "850" ;
-    :countriesAffected "EU-wide" ;
-    :fscaDescription "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk." ;
-    :eudamedFscaReference "EU-FSCA-2024-000001" .
+    :scope "All HeartMate 3 LVAD units implanted since 2020"^^xsd:string ;
+    :devicesAffected "850"^^xsd:string ;
+    :countriesAffected "EU-wide"^^xsd:string ;
+    :fscaDescription "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk."^^xsd:string ;
+    :eudamedFscaReference "EU-FSCA-2024-000001"^^xsd:string .
 
 :FSCA-002
     rdf:type owl:NamedIndividual , :Recall ;
@@ -1353,11 +1388,11 @@
     :hasActionStatus :Closed ;
     :actionDate "2024-02-28"^^xsd:date ;
     :closureDate "2024-05-31"^^xsd:date ;
-    :scope "Micra AV lots manufactured between 2022-09 and 2023-03" ;
-    :devicesAffected "1240" ;
-    :countriesAffected "EU-wide + UK" ;
-    :fscaDescription "Voluntary recall of affected Micra AV lots due to premature battery depletion." ;
-    :eudamedFscaReference "EU-FSCA-2024-000002" .
+    :scope "Micra AV lots manufactured between 2022-09 and 2023-03"^^xsd:string ;
+    :devicesAffected "1240"^^xsd:string ;
+    :countriesAffected "EU-wide + UK"^^xsd:string ;
+    :fscaDescription "Voluntary recall of affected Micra AV lots due to premature battery depletion."^^xsd:string ;
+    :eudamedFscaReference "EU-FSCA-2024-000002"^^xsd:string .
 
 :FSCA-003
     rdf:type owl:NamedIndividual , :InSituCorrection ;
@@ -1367,11 +1402,11 @@
     :hasActionStatus :Closed ;
     :actionDate "2024-03-15"^^xsd:date ;
     :closureDate "2024-06-30"^^xsd:date ;
-    :scope "Portico THV sizes 23mm and 25mm from lots before 2023-11" ;
-    :devicesAffected "320" ;
-    :countriesAffected "EU-wide" ;
-    :fscaDescription "Enhanced deployment training and updated IFU for Portico valve implantation technique." ;
-    :eudamedFscaReference "EU-FSCA-2024-000003" .
+    :scope "Portico THV sizes 23mm and 25mm from lots before 2023-11"^^xsd:string ;
+    :devicesAffected "320"^^xsd:string ;
+    :countriesAffected "EU-wide"^^xsd:string ;
+    :fscaDescription "Enhanced deployment training and updated IFU for Portico valve implantation technique."^^xsd:string ;
+    :eudamedFscaReference "EU-FSCA-2024-000003"^^xsd:string .
 
 :FSCA-009
     rdf:type owl:NamedIndividual , :UserNotice ;
@@ -1381,11 +1416,11 @@
     :hasActionStatus :Closed ;
     :actionDate "2024-06-20"^^xsd:date ;
     :closureDate "2024-09-30"^^xsd:date ;
-    :scope "All cobas e 801 immunoassay analysers" ;
-    :devicesAffected "620" ;
-    :countriesAffected "EU-wide" ;
-    :fscaDescription "Customer field notification regarding biotin interference in TSH assay." ;
-    :eudamedFscaReference "EU-FSCA-2024-000009" .
+    :scope "All cobas e 801 immunoassay analysers"^^xsd:string ;
+    :devicesAffected "620"^^xsd:string ;
+    :countriesAffected "EU-wide"^^xsd:string ;
+    :fscaDescription "Customer field notification regarding biotin interference in TSH assay."^^xsd:string ;
+    :eudamedFscaReference "EU-FSCA-2024-000009"^^xsd:string .
 
 :FSCA-010
     rdf:type owl:NamedIndividual , :Recall ;
@@ -1395,11 +1430,11 @@
     :hasActionStatus :Closed ;
     :actionDate "2024-06-30"^^xsd:date ;
     :closureDate "2024-08-31"^^xsd:date ;
-    :scope "cobas SARS-CoV-2 RT-PCR reagent lot numbers CV-2024-0312 to CV-2024-0318" ;
-    :devicesAffected "12500 tests" ;
-    :countriesAffected "EU-wide + Norway + Iceland" ;
-    :fscaDescription "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued." ;
-    :eudamedFscaReference "EU-FSCA-2024-000010" .
+    :scope "cobas SARS-CoV-2 RT-PCR reagent lot numbers CV-2024-0312 to CV-2024-0318"^^xsd:string ;
+    :devicesAffected "12500 tests"^^xsd:string ;
+    :countriesAffected "EU-wide + Norway + Iceland"^^xsd:string ;
+    :fscaDescription "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued."^^xsd:string ;
+    :eudamedFscaReference "EU-FSCA-2024-000010"^^xsd:string .
 
 #################################################################
 # EXPLICIT INCIDENT-FSCA LINKS
@@ -1416,105 +1451,26 @@
 :INC-012 :hasCorrectiveAction :FSCA-010 .
 
 #################################################################
-# SWRL VARIABLES
-# Comentario:
-# Estas variables se usan para representar las reglas SWRL en RDF/Turtle.
-# En Protégé también puedes reescribirlas en la vista Rules si lo prefieres.
-#################################################################
-
-:var_d rdf:type swrl:Variable .
-:var_i rdf:type swrl:Variable .
-:var_f rdf:type swrl:Variable .
-
-#################################################################
-# SWRL RULE 1
-# If a MedicalDevice has isIVD true, infer IVDDevice.
-# Regla útil para mostrar inferencia a partir de un booleano del CSV.
+# SWRL RULES
+# Formato swrla:hasRuleText — es el formato nativo que Protégé 5.x
+# escribe y lee a través de su SWRLAPI interno.
+# Las variables (?d, ?i, ?f) se declaran implícitamente en el texto.
 #################################################################
 
 :Rule_IVD_Device
     rdf:type swrl:Imp ;
-    rdfs:label "Infer IVD device from isIVD true"@en ;
-    rdfs:comment "SWRL rule: MedicalDevice(?d) and isIVD(?d,true) imply IVDDevice(?d)."@en ;
-    swrl:body (
-        [
-            rdf:type swrl:ClassAtom ;
-            swrl:classPredicate :MedicalDevice ;
-            swrl:argument1 :var_d
-        ]
-        [
-            rdf:type swrl:DatavaluedPropertyAtom ;
-            swrl:propertyPredicate :isIVD ;
-            swrl:argument1 :var_d ;
-            swrl:argument2 true
-        ]
-    ) ;
-    swrl:head (
-        [
-            rdf:type swrl:ClassAtom ;
-            swrl:classPredicate :IVDDevice ;
-            swrl:argument1 :var_d
-        ]
-    ) .
-
-#################################################################
-# SWRL RULE 2
-# If a MedicalDevice has isIVD false, infer MDRDevice.
-# Es una simplificación coherente con los CSV proporcionados.
-#################################################################
+    swrla:hasRuleText "MedicalDevice(?d), regulatedUnder(?d, IVDR) -> IVDDevice(?d)"@en ;
+    rdfs:label "Infer IVD device from IVDR framework"@en ;
+    rdfs:comment "SWRL rule: MedicalDevice(?d) and regulatedUnder(?d, IVDR) imply IVDDevice(?d)."@en .
 
 :Rule_MDR_Device
     rdf:type swrl:Imp ;
-    rdfs:label "Infer MDR device from isIVD false"@en ;
-    rdfs:comment "SWRL rule: MedicalDevice(?d) and isIVD(?d,false) imply MDRDevice(?d)."@en ;
-    swrl:body (
-        [
-            rdf:type swrl:ClassAtom ;
-            swrl:classPredicate :MedicalDevice ;
-            swrl:argument1 :var_d
-        ]
-        [
-            rdf:type swrl:DatavaluedPropertyAtom ;
-            swrl:propertyPredicate :isIVD ;
-            swrl:argument1 :var_d ;
-            swrl:argument2 false
-        ]
-    ) ;
-    swrl:head (
-        [
-            rdf:type swrl:ClassAtom ;
-            swrl:classPredicate :MDRDevice ;
-            swrl:argument1 :var_d
-        ]
-    ) .
-
-#################################################################
-# SWRL RULE 3
-# If an Incident has a corrective action, infer CorrectedIncident.
-# Esta regla conecta incidentes.csv con acciones_correctivas.csv.
-#################################################################
+    swrla:hasRuleText "MedicalDevice(?d), regulatedUnder(?d, MDR) -> MDRDevice(?d)"@en ;
+    rdfs:label "Infer MDR device from MDR framework"@en ;
+    rdfs:comment "SWRL rule: MedicalDevice(?d) and regulatedUnder(?d, MDR) imply MDRDevice(?d)."@en .
 
 :Rule_Corrected_Incident
     rdf:type swrl:Imp ;
+    swrla:hasRuleText "Incident(?i), hasCorrectiveAction(?i, ?f) -> CorrectedIncident(?i)"@en ;
     rdfs:label "Infer corrected incident from corrective action"@en ;
-    rdfs:comment "SWRL rule: Incident(?i) and hasCorrectiveAction(?i,?f) imply CorrectedIncident(?i)."@en ;
-    swrl:body (
-        [
-            rdf:type swrl:ClassAtom ;
-            swrl:classPredicate :Incident ;
-            swrl:argument1 :var_i
-        ]
-        [
-            rdf:type swrl:IndividualPropertyAtom ;
-            swrl:propertyPredicate :hasCorrectiveAction ;
-            swrl:argument1 :var_i ;
-            swrl:argument2 :var_f
-        ]
-    ) ;
-    swrl:head (
-        [
-            rdf:type swrl:ClassAtom ;
-            swrl:classPredicate :CorrectedIncident ;
-            swrl:argument1 :var_i
-        ]
-    ) .
+    rdfs:comment "SWRL rule: Incident(?i) and hasCorrectiveAction(?i,?f) imply CorrectedIncident(?i)."@en .
