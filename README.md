@@ -3,7 +3,7 @@
 
 **Ontología del catálogo europeo de dispositivos médicos de alto riesgo** bajo el marco regulatorio MDR (EU 2017/745) e IVDR (EU 2017/746).
 
-Fichero principal: `ontology_fixed.ttl`  
+Fichero principal: `ontology.ttl`  
 Namespace: `https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#`  
 Autor: lvlupcodex (github) lilarraza@uoc.edu (UOC) Laura del Carmen Ilarraza Prendes · UOC PEC2 · Primavera 2026
 
