@@ -1,0 +1,654 @@
+<h2 id="overv" class="list">Medical Device Risk Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#ActionStatus"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActionStatus">Action status</a>
+   </li>
+   <li>
+      <a href="#ActiveDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveDevice">Active device</a>
+   </li>
+   <li>
+      <a href="#ActiveImplant"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveImplant">Active implant</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
+   </li>
+   <li>
+      <a href="#CompetentAuthority"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority">Competent authority</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+   </li>
+   <li>
+      <a href="#ContaminationRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ContaminationRisk">Contamination risk</a>
+   </li>
+   <li>
+      <a href="#ControlledVocabularyConcept"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept">Controlled vocabulary concept</a>
+   </li>
+   <li>
+      <a href="#CorrectedIncident"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CorrectedIncident">Corrected incident</a>
+   </li>
+   <li>
+      <a href="#Country"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country">Country</a>
+   </li>
+   <li>
+      <a href="#CybersecurityRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CybersecurityRisk">Cybersecurity risk</a>
+   </li>
+   <li>
+      <a href="#DiagnosticRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DiagnosticRisk">Diagnostic risk</a>
+   </li>
+   <li>
+      <a href="#FieldSafetyCorrectiveAction"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction">Field safety corrective action</a>
+   </li>
+   <li>
+      <a href="#ImplantableActiveDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableActiveDevice">Implantable active device</a>
+   </li>
+   <li>
+      <a href="#ImplantableDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableDevice">Implantable device</a>
+   </li>
+   <li>
+      <a href="#InVitroDiagnosticDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InVitroDiagnosticDevice">In vitro diagnostic device</a>
+   </li>
+   <li>
+      <a href="#InSituCorrection"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InSituCorrection">In-situ correction</a>
+   </li>
+   <li>
+      <a href="#Incident"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident">Incident</a>
+   </li>
+   <li>
+      <a href="#InfectionRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InfectionRisk">Infection risk</a>
+   </li>
+   <li>
+      <a href="#InjuryRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InjuryRisk">Injury risk</a>
+   </li>
+   <li>
+      <a href="#InterferenceRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InterferenceRisk">Interference risk</a>
+   </li>
+   <li>
+      <a href="#IVDDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDDevice">IVD device</a>
+   </li>
+   <li>
+      <a href="#MalfunctionRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MalfunctionRisk">Malfunction risk</a>
+   </li>
+   <li>
+      <a href="#Manufacturer"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer">Manufacturer</a>
+   </li>
+   <li>
+      <a href="#MaterialRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MaterialRisk">Material risk</a>
+   </li>
+   <li>
+      <a href="#MDRDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDRDevice">MDR device</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/MedicalDevice" title="http://schema.org/MedicalDevice">Medical Device</a>
+   </li>
+   <li>
+      <a href="#MedicalDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice">Medical device</a>
+   </li>
+   <li>
+      <a href="#MedicalDeviceRiskEntity"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity">Medical device risk entity</a>
+   </li>
+   <li>
+      <a href="#NearMissIncident"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#NearMissIncident">Near-miss incident</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a>
+   </li>
+   <li>
+      <a href="#PacemakerDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#PacemakerDevice">Pacemaker device</a>
+   </li>
+   <li>
+      <a href="#ProbabilityLevel"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel">Probability level</a>
+   </li>
+   <li>
+      <a href="#RadiationRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RadiationRisk">Radiation risk</a>
+   </li>
+   <li>
+      <a href="#Recall"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Recall">Recall</a>
+   </li>
+   <li>
+      <a href="#RegulatoryFramework"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework">Regulatory framework</a>
+   </li>
+   <li>
+      <a href="#ReusableDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ReusableDevice">Reusable device</a>
+   </li>
+   <li>
+      <a href="#Risk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk">Risk</a>
+   </li>
+   <li>
+      <a href="#RiskCategory"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskCategory">Risk category</a>
+   </li>
+   <li>
+      <a href="#RiskClass"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass">Risk class</a>
+   </li>
+   <li>
+      <a href="#RiskType"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskType">Risk type</a>
+   </li>
+   <li>
+      <a href="#SafetyAlert"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SafetyAlert">Safety alert</a>
+   </li>
+   <li>
+      <a href="#SelfTestDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SelfTestDevice">Self-test device</a>
+   </li>
+   <li>
+      <a href="#SeriousIncident"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident">Serious incident</a>
+   </li>
+   <li>
+      <a href="#SeverityLevel"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel">Severity level</a>
+   </li>
+   <li>
+      <a href="#SingleUseDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SingleUseDevice">Single-use device</a>
+   </li>
+   <li>
+      <a href="#SoftwareRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SoftwareRisk">Software risk</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/11/swrl#Imp" title="http://www.w3.org/2003/11/swrl#Imp">SWRL Implication</a>
+   </li>
+   <li>
+      <a href="#UserNotice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#UserNotice">User notice</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#addressesIncident"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#addressesIncident">addresses incident</a>
+   </li>
+   <li>
+      <a href="#concernsDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#concernsDevice">concerns device</a>
+   </li>
+   <li>
+      <a href="#hasActionStatus"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasActionStatus">has action status</a>
+   </li>
+   <li>
+      <a href="#hasCompetentAuthority"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCompetentAuthority">has competent authority</a>
+   </li>
+   <li>
+      <a href="#hasCorrectiveAction"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCorrectiveAction">has corrective action</a>
+   </li>
+   <li>
+      <a href="#hasIncident"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasIncident">has incident</a>
+   </li>
+   <li>
+      <a href="#hasManufacturer"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturer">has manufacturer</a>
+   </li>
+   <li>
+      <a href="#hasManufacturerCountry"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturerCountry">has manufacturer country</a>
+   </li>
+   <li>
+      <a href="#hasProbability"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasProbability">has probability</a>
+   </li>
+   <li>
+      <a href="#hasRiskClass"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasRiskClass">has risk class</a>
+   </li>
+   <li>
+      <a href="#hasSeverity"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasSeverity">has severity</a>
+   </li>
+   <li>
+      <a href="#involvesRisk"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#involvesRisk">involves risk</a>
+   </li>
+   <li>
+      <a href="#manufacturesDevice"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturesDevice">manufactures device</a>
+   </li>
+   <li>
+      <a href="#regulatedUnder"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#regulatedUnder">regulated under</a>
+   </li>
+   <li>
+      <a href="#reportedBy"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedBy">reported by</a>
+   </li>
+   <li>
+      <a href="#reportedInCountry"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedInCountry">reported in country</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#actionDate"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#actionDate">action date</a>
+   </li>
+   <li>
+      <a href="#authorizationNumber"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#authorizationNumber">authorization number</a>
+   </li>
+   <li>
+      <a href="#closureDate"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#closureDate">closure date</a>
+   </li>
+   <li>
+      <a href="#contactEmail"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#contactEmail">contact email</a>
+   </li>
+   <li>
+      <a href="#correctiveActionTaken"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#correctiveActionTaken">corrective action taken</a>
+   </li>
+   <li>
+      <a href="#countriesAffected"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#countriesAffected">countries affected</a>
+   </li>
+   <li>
+      <a href="#detectionDate"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#detectionDate">detection date</a>
+   </li>
+   <li>
+      <a href="#deviceName"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#deviceName">device name</a>
+   </li>
+   <li>
+      <a href="#devicesAffected"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#devicesAffected">devices affected</a>
+   </li>
+   <li>
+      <a href="#eudamedFscaReference"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedFscaReference">EUDAMED FSCA reference</a>
+   </li>
+   <li>
+      <a href="#eudamedIncidentReference"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedIncidentReference">EUDAMED incident reference</a>
+   </li>
+   <li>
+      <a href="#eudamedSrn"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedSrn">EUDAMED SRN</a>
+   </li>
+   <li>
+      <a href="#eventDate"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eventDate">event date</a>
+   </li>
+   <li>
+      <a href="#fscaDescription"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#fscaDescription">FSCA description</a>
+   </li>
+   <li>
+      <a href="#imdrfCode"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#imdrfCode">IMDRF code</a>
+   </li>
+   <li>
+      <a href="#incidentDescription"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#incidentDescription">incident description</a>
+   </li>
+   <li>
+      <a href="#intendedPurpose"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#intendedPurpose">intended purpose</a>
+   </li>
+   <li>
+      <a href="#isActive"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isActive">is active</a>
+   </li>
+   <li>
+      <a href="#isImplantable"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isImplantable">is implantable</a>
+   </li>
+   <li>
+      <a href="#isIVD"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isIVD">is IVD</a>
+   </li>
+   <li>
+      <a href="#isReusable"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isReusable">is reusable</a>
+   </li>
+   <li>
+      <a href="#manufacturerName"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturerName">manufacturer name</a>
+   </li>
+   <li>
+      <a href="#outcome"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#outcome">outcome</a>
+   </li>
+   <li>
+      <a href="#patientAge"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientAge">patient age</a>
+   </li>
+   <li>
+      <a href="#patientSex"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientSex">patient sex</a>
+   </li>
+   <li>
+      <a href="#reportDate"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportDate">report date</a>
+   </li>
+   <li>
+      <a href="#riskName"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#riskName">risk name</a>
+   </li>
+   <li>
+      <a href="#scope"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#scope">scope</a>
+   </li>
+   <li>
+      <a href="#udiDi"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#udiDi">UDI-DI</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleText"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleText">
+         <span>has Rule Text</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">
+         <span>mbox</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel">
+         <span>pref Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#MAN-002"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-002">Abbott Medical Devices</a>
+   </li>
+   <li>
+      <a href="#ANSM"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ANSM">Agence nationale de sécurité du médicament</a>
+   </li>
+   <li>
+      <a href="#RSK-009"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-009">Battery depletion - premature</a>
+   </li>
+   <li>
+      <a href="#BfArM"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#BfArM">Bundesinstitut für Arzneimittel und Medizinprodukte</a>
+   </li>
+   <li>
+      <a href="#ClassA"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassA">Class A</a>
+   </li>
+   <li>
+      <a href="#ClassB"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassB">Class B</a>
+   </li>
+   <li>
+      <a href="#ClassC"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassC">Class C</a>
+   </li>
+   <li>
+      <a href="#ClassD"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassD">Class D</a>
+   </li>
+   <li>
+      <a href="#ClassI"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassI">Class I</a>
+   </li>
+   <li>
+      <a href="#ClassIIa"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIa">Class IIa</a>
+   </li>
+   <li>
+      <a href="#ClassIIb"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIb">Class IIb</a>
+   </li>
+   <li>
+      <a href="#ClassIII"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIII">Class III</a>
+   </li>
+   <li>
+      <a href="#Closed"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed">Closed</a>
+   </li>
+   <li>
+      <a href="#DEV-016"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-016">cobas e 801 Immunoassay Analyzer</a>
+   </li>
+   <li>
+      <a href="#DEV-017"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-017">cobas SARS-CoV-2 RT-PCR Test</a>
+   </li>
+   <li>
+      <a href="#Critical"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Critical">Critical</a>
+   </li>
+   <li>
+      <a href="#RSK-005"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-005">Device migration - implant</a>
+   </li>
+   <li>
+      <a href="#RSK-015"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-015">False negative result</a>
+   </li>
+   <li>
+      <a href="#RSK-014"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-014">False positive result</a>
+   </li>
+   <li>
+      <a href="#France"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#France">France</a>
+   </li>
+   <li>
+      <a href="#FSCA-001"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-001">FSCA-001 HeartMate 3 safety alert</a>
+   </li>
+   <li>
+      <a href="#FSCA-002"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-002">FSCA-002 Micra AV recall</a>
+   </li>
+   <li>
+      <a href="#FSCA-003"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-003">FSCA-003 Portico valve in-situ correction</a>
+   </li>
+   <li>
+      <a href="#FSCA-009"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-009">FSCA-009 cobas e 801 user notice</a>
+   </li>
+   <li>
+      <a href="#FSCA-010"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-010">FSCA-010 cobas SARS-CoV-2 reagent recall</a>
+   </li>
+   <li>
+      <a href="#Germany"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany">Germany</a>
+   </li>
+   <li>
+      <a href="#HPRA"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#HPRA">Health Products Regulatory Authority</a>
+   </li>
+   <li>
+      <a href="#DEV-001"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-001">HeartMate 3 LVAD</a>
+   </li>
+   <li>
+      <a href="#High"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#High">High</a>
+   </li>
+   <li>
+      <a href="#INC-001"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-001">INC-001 HeartMate 3 LVAD thrombosis incident</a>
+   </li>
+   <li>
+      <a href="#INC-002"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-002">INC-002 Micra AV battery incident</a>
+   </li>
+   <li>
+      <a href="#INC-003"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-003">INC-003 Portico valve migration incident</a>
+   </li>
+   <li>
+      <a href="#INC-011"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-011">INC-011 cobas e 801 false positive TSH incident</a>
+   </li>
+   <li>
+      <a href="#INC-012"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-012">INC-012 cobas SARS-CoV-2 false negative incident</a>
+   </li>
+   <li>
+      <a href="#Ireland"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Ireland">Ireland</a>
+   </li>
+   <li>
+      <a href="#IVDR"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDR">IVDR</a>
+   </li>
+   <li>
+      <a href="#Low"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low">Low</a>
+   </li>
+   <li>
+      <a href="#MDR"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDR">MDR</a>
+   </li>
+   <li>
+      <a href="#Medium"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Medium">Medium</a>
+   </li>
+   <li>
+      <a href="#MAN-001"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001">Medtronic plc</a>
+   </li>
+   <li>
+      <a href="#DEV-002"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-002">Micra AV Transcatheter Pacing System</a>
+   </li>
+   <li>
+      <a href="#Moderate"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Moderate">Moderate</a>
+   </li>
+   <li>
+      <a href="#Netherlands"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Netherlands">Netherlands</a>
+   </li>
+   <li>
+      <a href="#Open"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Open">Open</a>
+   </li>
+   <li>
+      <a href="#DEV-003"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-003">Portico Transcatheter Heart Valve</a>
+   </li>
+   <li>
+      <a href="#RIVM"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RIVM">Rijksinstituut voor Volksgezondheid en Milieu</a>
+   </li>
+   <li>
+      <a href="#MAN-005"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005">Roche Diagnostics GmbH</a>
+   </li>
+   <li>
+      <a href="#Serious"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Serious">Serious</a>
+   </li>
+   <li>
+      <a href="#MAN-003"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-003">Siemens Healthineers AG</a>
+   </li>
+   <li>
+      <a href="#RSK-003"
+         title="https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-003">Thrombosis - device-related</a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e3002">Infer corrected incident from corrective action</a>
+   </li>
+   <li>
+      <a href="#d4e3018">Infer IVD device from IVDR framework</a>
+   </li>
+   <li>
+      <a href="#d4e3033">Infer MDR device from MDR framework</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 

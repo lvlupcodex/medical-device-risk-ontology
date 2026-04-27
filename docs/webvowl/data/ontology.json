@@ -1,0 +1,3167 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2003/11/swrl", "http://xmlns.com/foaf/0.1", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "Medical Device Risk Ontology"
+    },
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#",
+    "author" : [ "lvlupcodex" ],
+    "description" : {
+      "en" : "EN: Ontology for representing medical devices, manufacturers, risks, incidents and field safety corrective actions under MDR and IVDR."
+    },
+    "labels" : {
+      "en" : "Medical Device Risk Ontology"
+    },
+    "comments" : {
+      "en" : "This ontology models a European-style catalogue of medical devices, manufacturers, IMDRF risks, reported incidents and field safety corrective actions. It is designed as an application ontology for the PEC2 assignment."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "lvlupcodex",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-04-20",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Medical Device Risk Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "167",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDevice",
+      "en" : "Active device"
+    },
+    "subClasses" : [ "6", "7" ],
+    "comment" : {
+      "en" : "A device that depends on a source of energy for its operation."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Risk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Risk",
+      "en" : "Risk"
+    },
+    "subClasses" : [ "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" ],
+    "comment" : {
+      "en" : "A risk identified for a medical device according to a controlled risk terminology, such as IMDRF-inspired coding."
+    },
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableActiveDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableActiveDevice",
+      "en" : "Implantable active device"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-001",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Device instance from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-001",
+        "en" : "HeartMate 3 LVAD"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device that is both implantable and active."
+    },
+    "id" : "6",
+    "superClasses" : [ "21", "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "subClasses" : [ "23" ],
+    "comment" : {
+      "en" : "External class from SKOS representing a concept in a controlled vocabulary. Used as superclass of ControlledVocabularyConcept."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InfectionRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InfectionRisk",
+      "en" : "Infection risk"
+    },
+    "comment" : {
+      "en" : "Risk related to infection associated with a device."
+    },
+    "id" : "17",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ImplantableDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/resource/Implant_(medicine)",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ImplantableDevice",
+      "en" : "Implantable device"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-003",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Device instance from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-003",
+        "en" : "Portico Transcatheter Heart Valve"
+      }
+    } ],
+    "subClasses" : [ "6", "7" ],
+    "comment" : {
+      "en" : "A device intended to be totally or partially introduced into the human body."
+    },
+    "id" : "21",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IVDDevice",
+      "en" : "IVD device"
+    },
+    "subClasses" : [ "31", "32" ],
+    "comment" : {
+      "en" : "An in vitro diagnostic medical device regulated under the In Vitro Diagnostic Regulation."
+    },
+    "id" : "30",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Organization",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization"
+    },
+    "subClasses" : [ "25" ],
+    "comment" : {
+      "en" : "External class from FOAF representing an organization. Used as superclass of the local Manufacturer class."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#UserNotice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserNotice",
+      "en" : "User notice"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-009",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Field safety corrective action instance from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-009",
+        "en" : "FSCA-009 cobas e 801 user notice"
+      }
+    } ],
+    "comment" : {
+      "en" : "A notice issued to users or healthcare professionals about safe use of a device."
+    },
+    "id" : "38",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CompetentAuthority",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompetentAuthority",
+      "en" : "Competent authority"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#HPRA",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Irish competent authority for health products."
+      },
+      "labels" : {
+        "IRI-based" : "HPRA",
+        "en" : "Health Products Regulatory Authority"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#BfArM",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "German competent authority for drugs and medical devices."
+      },
+      "labels" : {
+        "IRI-based" : "BfArM",
+        "en" : "Bundesinstitut für Arzneimittel und Medizinprodukte"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RIVM",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Dutch public health and environment institute acting as competent authority in the provided data."
+      },
+      "labels" : {
+        "IRI-based" : "RIVM",
+        "en" : "Rijksinstituut voor Volksgezondheid en Milieu"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ANSM",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "French competent authority for medicines and health products."
+      },
+      "labels" : {
+        "IRI-based" : "ANSM",
+        "en" : "Agence nationale de sécurité du médicament"
+      }
+    } ],
+    "comment" : {
+      "en" : "Regulatory authority responsible for medical device oversight in a country."
+    },
+    "id" : "41",
+    "superClasses" : [ "42", "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SafetyAlert",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SafetyAlert",
+      "en" : "Safety alert"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-001",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Field safety corrective action instance from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-001",
+        "en" : "FSCA-001 HeartMate 3 safety alert"
+      }
+    } ],
+    "comment" : {
+      "en" : "A field safety corrective action based on a safety communication or alert."
+    },
+    "id" : "47",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskCategory",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskCategory",
+      "en" : "Risk category"
+    },
+    "comment" : {
+      "en" : "High-level category used to group risks, such as Device Failure or Patient Harm."
+    },
+    "id" : "48",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDRDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MDRDevice",
+      "en" : "MDR device"
+    },
+    "comment" : {
+      "en" : "A medical device regulated under the Medical Device Regulation."
+    },
+    "id" : "51",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskType",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskType",
+      "en" : "Risk type"
+    },
+    "comment" : {
+      "en" : "Specific type of risk, such as MalfunctionRisk, InjuryRisk or DiagnosticRisk."
+    },
+    "id" : "53",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#NearMissIncident",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NearMissIncident",
+      "en" : "Near-miss incident"
+    },
+    "comment" : {
+      "en" : "An incident that did not result in harm but could have led to an adverse outcome."
+    },
+    "id" : "54",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ControlledVocabularyConcept",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ControlledVocabularyConcept",
+      "en" : "Controlled vocabulary concept"
+    },
+    "subClasses" : [ "55", "48", "56", "57", "53", "58", "59", "60" ],
+    "comment" : {
+      "en" : "A controlled concept used to normalize categorical values from the CSV files."
+    },
+    "id" : "23",
+    "superClasses" : [ "22", "10" ]
+  }, {
+    "iri" : "http://schema.org/MedicalDevice",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MedicalDevice",
+      "en" : "Medical Device"
+    },
+    "subClasses" : [ "5" ],
+    "comment" : {
+      "en" : "External class from schema.org representing a medical device. Used as superclass of the local MedicalDevice class."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "en" : "Agent"
+    },
+    "subClasses" : [ "41" ],
+    "comment" : {
+      "en" : "External class from PROV-O representing an agent that can act. Used as superclass of the local CompetentAuthority class."
+    },
+    "attributes" : [ "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DiagnosticRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiagnosticRisk",
+      "en" : "Diagnostic risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-014",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Risk instance from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-014",
+        "en" : "False positive result"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-015",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Risk instance from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-015",
+        "en" : "False negative result"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk related to incorrect diagnostic results."
+    },
+    "id" : "19",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InjuryRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InjuryRisk",
+      "en" : "Injury risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-003",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Risk instance from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-003",
+        "en" : "Thrombosis - device-related"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk related to patient injury or harm."
+    },
+    "id" : "20",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Recall",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recall",
+      "en" : "Recall"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-010",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Field safety corrective action instance from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-010",
+        "en" : "FSCA-010 cobas SARS-CoV-2 reagent recall"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-002",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Field safety corrective action instance from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-002",
+        "en" : "FSCA-002 Micra AV recall"
+      }
+    } ],
+    "comment" : {
+      "en" : "A field safety corrective action involving removal, replacement or recall of affected devices."
+    },
+    "id" : "79",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SelfTestDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelfTestDevice",
+      "en" : "Self-test device"
+    },
+    "comment" : {
+      "en" : "An in vitro diagnostic device intended to be used by lay persons or patients."
+    },
+    "id" : "32",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InSituCorrection",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InSituCorrection",
+      "en" : "In-situ correction"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FSCA-003",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Field safety corrective action instance from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-003",
+        "en" : "FSCA-003 Portico valve in-situ correction"
+      }
+    } ],
+    "comment" : {
+      "en" : "A corrective action performed in the field without removing the device from use."
+    },
+    "id" : "85",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RegulatoryFramework",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegulatoryFramework",
+      "en" : "Regulatory framework"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#IVDR",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "IVDR",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Regulatory framework for in vitro diagnostic medical devices.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "In Vitro Diagnostic Regulation framework."
+      },
+      "labels" : {
+        "IRI-based" : "IVDR",
+        "en" : "IVDR"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MDR",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "MDR",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Regulatory framework for medical devices.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Medical Device Regulation framework."
+      },
+      "labels" : {
+        "IRI-based" : "MDR",
+        "en" : "MDR"
+      }
+    } ],
+    "comment" : {
+      "en" : "Regulatory framework applicable to a device, such as MDR or IVDR."
+    },
+    "id" : "55",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/resource/Medical_device",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://schema.org/MedicalDevice",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MedicalDevice",
+      "en" : "Medical device"
+    },
+    "subClasses" : [ "21", "4", "30", "51", "86", "87" ],
+    "comment" : {
+      "en" : "A medical device or in vitro diagnostic device represented in the catalogue and regulated under MDR or IVDR."
+    },
+    "id" : "5",
+    "superClasses" : [ "61", "10" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeriousIncident",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "en" : "Serious incident"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-011",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Incident instance from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "INC-011",
+        "en" : "INC-011 cobas e 801 false positive TSH incident"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-002",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Incident instance from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "INC-002",
+        "en" : "INC-002 Micra AV battery incident"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-012",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Incident instance from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "INC-012",
+        "en" : "INC-012 cobas SARS-CoV-2 false negative incident"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-001",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Incident instance from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "INC-001",
+        "en" : "INC-001 HeartMate 3 LVAD thrombosis incident"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#INC-003",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Incident instance from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "INC-003",
+        "en" : "INC-003 Portico valve migration incident"
+      }
+    } ],
+    "comment" : {
+      "en" : "An incident that resulted, might have resulted or may result in serious patient harm or device malfunction."
+    },
+    "id" : "92",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Incident",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Incident",
+      "en" : "Incident"
+    },
+    "subClasses" : [ "92", "105", "54" ],
+    "comment" : {
+      "en" : "A reported event associated with a medical device, a risk and an outcome."
+    },
+    "id" : "2",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActiveImplant",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveImplant",
+      "en" : "Active implant"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-002",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Device instance from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-002",
+        "en" : "Micra AV Transcatheter Pacing System"
+      }
+    } ],
+    "subClasses" : [ "107" ],
+    "comment" : {
+      "en" : "An implantable device that depends on a source of energy for its operation."
+    },
+    "id" : "7",
+    "superClasses" : [ "21", "4" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RiskClass",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskClass",
+      "en" : "Risk class"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassA",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class A",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "IVDR risk class A."
+      },
+      "labels" : {
+        "IRI-based" : "ClassA",
+        "en" : "Class A"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIa",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class IIa",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "MDR risk class IIa."
+      },
+      "labels" : {
+        "IRI-based" : "ClassIIa",
+        "en" : "Class IIa"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassI",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class I",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "MDR risk class I."
+      },
+      "labels" : {
+        "IRI-based" : "ClassI",
+        "en" : "Class I"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIIb",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class IIb",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "MDR risk class IIb."
+      },
+      "labels" : {
+        "IRI-based" : "ClassIIb",
+        "en" : "Class IIb"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassIII",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class III",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "MDR risk class III, usually associated with high-risk medical devices."
+      },
+      "labels" : {
+        "IRI-based" : "ClassIII",
+        "en" : "Class III"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassD",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class D",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "IVDR risk class D, usually associated with high-risk in vitro diagnostic devices."
+      },
+      "labels" : {
+        "IRI-based" : "ClassD",
+        "en" : "Class D"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassC",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class C",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "IVDR risk class C."
+      },
+      "labels" : {
+        "IRI-based" : "ClassC",
+        "en" : "Class C"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ClassB",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class B",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "IVDR risk class B."
+      },
+      "labels" : {
+        "IRI-based" : "ClassB",
+        "en" : "Class B"
+      }
+    } ],
+    "comment" : {
+      "en" : "Regulatory risk class assigned to a device under MDR or IVDR."
+    },
+    "id" : "57",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MedicalDeviceRiskEntity",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MedicalDeviceRiskEntity",
+      "en" : "Medical device risk entity"
+    },
+    "subClasses" : [ "25", "5", "9", "1", "2", "41", "23" ],
+    "comment" : {
+      "en" : "Root class for all local entities defined in the medical device risk ontology."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MalfunctionRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MalfunctionRisk",
+      "en" : "Malfunction risk"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-005",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Risk instance from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-005",
+        "en" : "Device migration - implant"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RSK-009",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Risk instance from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-009",
+        "en" : "Battery depletion - premature"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk related to device malfunction or failure."
+    },
+    "id" : "14",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#PacemakerDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/resource/Artificial_cardiac_pacemaker",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PacemakerDevice",
+      "en" : "Pacemaker device"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-002",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Device instance from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-002",
+        "en" : "Micra AV Transcatheter Pacing System"
+      }
+    } ],
+    "comment" : {
+      "en" : "An active implantable device used for cardiac pacing."
+    },
+    "id" : "107",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SingleUseDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleUseDevice",
+      "en" : "Single-use device"
+    },
+    "comment" : {
+      "en" : "A device intended to be used once and not reprocessed for reuse."
+    },
+    "id" : "87",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ActionStatus",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActionStatus",
+      "en" : "Action status"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Open",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Open",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Open status for a field safety corrective action."
+      },
+      "labels" : {
+        "IRI-based" : "Open",
+        "en" : "Open"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Closed",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Closed",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Closed status for a field safety corrective action."
+      },
+      "labels" : {
+        "IRI-based" : "Closed",
+        "en" : "Closed"
+      }
+    } ],
+    "comment" : {
+      "en" : "Controlled concept describing whether a field safety corrective action is open or closed."
+    },
+    "id" : "59",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InterferenceRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterferenceRisk",
+      "en" : "Interference risk"
+    },
+    "comment" : {
+      "en" : "Risk related to electromagnetic or imaging interference."
+    },
+    "id" : "12",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Country",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "en" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Ireland",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ireland",
+          "type" : "label"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/Republic_of_Ireland",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Country individual representing Ireland."
+      },
+      "labels" : {
+        "IRI-based" : "Ireland",
+        "en" : "Ireland"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Germany",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Germany",
+          "type" : "label"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/Germany",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Country individual representing Germany."
+      },
+      "labels" : {
+        "IRI-based" : "Germany",
+        "en" : "Germany"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#France",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "France",
+          "type" : "label"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/France",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Country individual representing France."
+      },
+      "labels" : {
+        "IRI-based" : "France",
+        "en" : "France"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Netherlands",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Netherlands",
+          "type" : "label"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/Netherlands",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Country individual representing the Netherlands."
+      },
+      "labels" : {
+        "IRI-based" : "Netherlands",
+        "en" : "Netherlands"
+      }
+    } ],
+    "comment" : {
+      "en" : "Country related to a manufacturer, reported incident or corrective action scope."
+    },
+    "id" : "56",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#FieldSafetyCorrectiveAction",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FieldSafetyCorrectiveAction",
+      "en" : "Field safety corrective action"
+    },
+    "subClasses" : [ "79", "47", "85", "38" ],
+    "comment" : {
+      "en" : "A field safety corrective action, such as a recall, safety alert, user notice or in-situ correction, associated with an incident."
+    },
+    "id" : "1",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#InVitroDiagnosticDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InVitroDiagnosticDevice",
+      "en" : "In vitro diagnostic device"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-016",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Device instance from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-016",
+        "en" : "cobas e 801 Immunoassay Analyzer"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#DEV-017",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "comment" : {
+        "en" : "Device instance from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-017",
+        "en" : "cobas SARS-CoV-2 RT-PCR Test"
+      }
+    } ],
+    "comment" : {
+      "en" : "A device intended for the examination of specimens derived from the human body for diagnostic purposes."
+    },
+    "id" : "31",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MaterialRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialRisk",
+      "en" : "Material risk"
+    },
+    "comment" : {
+      "en" : "Risk related to material wear, corrosion, particles or toxicity."
+    },
+    "id" : "11",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Manufacturer",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "en" : "Manufacturer"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-003",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "en",
+          "value" : "Siemens Healthineers AG",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:regulatory@siemens-healthineers.com",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/Siemens_Healthineers",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Manufacturer instance from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "MAN-003",
+        "en" : "Siemens Healthineers AG"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-001",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "en",
+          "value" : "Medtronic plc",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:regulatory@medtronic.com",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/Medtronic",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Manufacturer instance from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "MAN-001",
+        "en" : "Medtronic plc"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-002",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "en",
+          "value" : "Abbott Medical Devices",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:regulatory@abbott.com",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/Abbott_Laboratories",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Manufacturer instance from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "MAN-002",
+        "en" : "Abbott Medical Devices"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#MAN-005",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "en",
+          "value" : "Roche Diagnostics GmbH",
+          "type" : "label"
+        } ],
+        "mbox" : [ {
+          "identifier" : "mbox",
+          "language" : "undefined",
+          "value" : "mailto:regulatory@roche.com",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resource/Hoffmann-La_Roche",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Manufacturer instance from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "MAN-005",
+        "en" : "Roche Diagnostics GmbH"
+      }
+    } ],
+    "comment" : {
+      "en" : "An organization responsible for manufacturing or placing a medical device on the market."
+    },
+    "id" : "25",
+    "superClasses" : [ "36", "10" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SoftwareRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoftwareRisk",
+      "en" : "Software risk"
+    },
+    "comment" : {
+      "en" : "Risk related to software malfunction or incorrect software behavior."
+    },
+    "id" : "13",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ContaminationRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContaminationRisk",
+      "en" : "Contamination risk"
+    },
+    "comment" : {
+      "en" : "Risk related to contamination of reagents or medical products."
+    },
+    "id" : "15",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "156",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "145",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "159",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "142",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "160",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CybersecurityRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CybersecurityRisk",
+      "en" : "Cybersecurity risk"
+    },
+    "comment" : {
+      "en" : "Risk related to exploitable cybersecurity vulnerabilities."
+    },
+    "id" : "16",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ReusableDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReusableDevice",
+      "en" : "Reusable device"
+    },
+    "comment" : {
+      "en" : "A device designed to be reused after appropriate reprocessing or maintenance."
+    },
+    "id" : "86",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#RadiationRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiationRisk",
+      "en" : "Radiation risk"
+    },
+    "comment" : {
+      "en" : "Risk related to unintended or excessive radiation exposure."
+    },
+    "id" : "18",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#CorrectedIncident",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrectedIncident",
+      "en" : "Corrected incident"
+    },
+    "comment" : {
+      "en" : "An incident for which a corrective action has been taken or is associated."
+    },
+    "id" : "105",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#SeverityLevel",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeverityLevel",
+      "en" : "Severity level"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Critical",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Critical",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Critical severity level."
+      },
+      "labels" : {
+        "IRI-based" : "Critical",
+        "en" : "Critical"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Serious",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Serious",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Serious severity level."
+      },
+      "labels" : {
+        "IRI-based" : "Serious",
+        "en" : "Serious"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Moderate",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Moderate",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Moderate severity level."
+      },
+      "labels" : {
+        "IRI-based" : "Moderate",
+        "en" : "Moderate"
+      }
+    } ],
+    "comment" : {
+      "en" : "Controlled concept describing the severity of a risk."
+    },
+    "id" : "58",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2003/11/swrl#Imp",
+    "baseIri" : "http://www.w3.org/2003/11/swrl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Imp",
+      "en" : "SWRL Implication"
+    },
+    "comment" : {
+      "en" : "SWRL vocabulary class representing an implication rule. Declared here to satisfy OWL class typing requirements."
+    },
+    "attributes" : [ "external" ],
+    "id" : "167"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#ProbabilityLevel",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProbabilityLevel",
+      "en" : "Probability level"
+    },
+    "individuals" : [ {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Medium",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Medium",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Medium probability level."
+      },
+      "labels" : {
+        "IRI-based" : "Medium",
+        "en" : "Medium"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#High",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "High",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "High probability level."
+      },
+      "labels" : {
+        "IRI-based" : "High",
+        "en" : "High"
+      }
+    }, {
+      "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#Low",
+      "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Low",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Low probability level."
+      },
+      "labels" : {
+        "IRI-based" : "Low",
+        "en" : "Low"
+      }
+    } ],
+    "comment" : {
+      "en" : "Controlled concept describing the probability of a risk."
+    },
+    "id" : "60",
+    "superClasses" : [ "23" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "163",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "164",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "166",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "169",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#addressesIncident",
+    "inverse" : "3",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "addressesIncident",
+      "en" : "addresses incident"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a field safety corrective action to the incident it addresses."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedSrn",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "eudamedSrn",
+      "en" : "EUDAMED SRN"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Single Registration Number used in EUDAMED-like contexts."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#scope",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "scope",
+      "en" : "scope"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Scope of the field safety corrective action, such as affected lots, models or versions."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturesDevice",
+    "inverse" : "46",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "manufacturesDevice",
+      "en" : "manufactures device"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Relates a manufacturer to a medical device manufactured by it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#contactEmail",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "contactEmail",
+      "en" : "contact email"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Regulatory contact email of the manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportDate",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "reportDate",
+      "en" : "report date"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Date on which the incident was reported."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasActionStatus",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "hasActionStatus",
+      "en" : "has action status"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a field safety corrective action to its current status."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#closureDate",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "closureDate",
+      "en" : "closure date"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Date on which the field safety corrective action was closed, when available."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#intendedPurpose",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "intendedPurpose",
+      "en" : "intended purpose"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Intended medical purpose of the device."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCompetentAuthority",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasCompetentAuthority",
+      "en" : "has competent authority"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Relates a manufacturer to the competent authority responsible for oversight."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturerCountry",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "hasManufacturerCountry",
+      "en" : "has manufacturer country"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Relates a manufacturer to its country."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#imdrfCode",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "imdrfCode",
+      "en" : "IMDRF code"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "IMDRF-inspired risk code."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "69"
+  }, {
+    "range" : "23",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "23",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "23",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#correctiveActionTaken",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "correctiveActionTaken",
+      "en" : "corrective action taken"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Boolean value indicating whether a corrective action was taken for the incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#riskName",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "riskName",
+      "en" : "risk name"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Human-readable name of the risk."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#devicesAffected",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "devicesAffected",
+      "en" : "devices affected"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Number or description of devices affected by the field safety corrective action. It is modelled as string because some CSV values include units such as tests."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "88"
+  }, {
+    "range" : "30",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedInCountry",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "reportedInCountry",
+      "en" : "reported in country"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates an incident to the country where it was reported."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "30",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "range" : "23",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "36",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "22",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasIncident",
+    "inverse" : "97",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasIncident",
+      "en" : "has incident"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relates a medical device to an incident reported for it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "range" : "9",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasCorrectiveAction",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasCorrectiveAction",
+      "en" : "has corrective action"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates an incident to a field safety corrective action."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "range" : "21",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "21",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "100"
+  }, {
+    "range" : "9",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "range" : "9",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#regulatedUnder",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "regulatedUnder",
+      "en" : "regulated under"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relates a device to the regulatory framework under which it is registered."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasManufacturer",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasManufacturer",
+      "en" : "has manufacturer"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relates a medical device to the manufacturer responsible for it."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#involvesRisk",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "involvesRisk",
+      "en" : "involves risk"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates an incident to the risk involved in the event."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientAge",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "patientAge",
+      "en" : "patient age"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Age of the patient involved in the incident, when available."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "106"
+  }, {
+    "range" : "9",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedFscaReference",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "eudamedFscaReference",
+      "en" : "EUDAMED FSCA reference"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "EUDAMED-like reference identifier for the field safety corrective action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "109"
+  }, {
+    "range" : "9",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "range" : "9",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "9",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "9",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "range" : "9",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "9",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasSeverity",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "hasSeverity",
+      "en" : "has severity"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a risk to its severity level."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "10",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "range" : "10",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "range" : "10",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "range" : "10",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#udiDi",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "udiDi",
+      "en" : "UDI-DI"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Unique Device Identification Device Identifier."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#outcome",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "outcome",
+      "en" : "outcome"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Clinical, technical or regulatory outcome reported for an incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eudamedIncidentReference",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "eudamedIncidentReference",
+      "en" : "EUDAMED incident reference"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "EUDAMED-like reference identifier for the incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasProbability",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "hasProbability",
+      "en" : "has probability"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a risk to its probability level."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#concernsDevice",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "concernsDevice",
+      "en" : "concerns device"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates an incident to the device involved in the event."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "97"
+  }, {
+    "range" : "10",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "range" : "7",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isIVD",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "isIVD",
+      "en" : "is IVD"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Boolean value indicating whether the device is an in vitro diagnostic device."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "130"
+  }, {
+    "range" : "2",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "range" : "5",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "range" : "2",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "2",
+    "domain" : "105",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "5",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#reportedBy",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "reportedBy",
+      "en" : "reported by"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates an incident to the reporting manufacturer or entity."
+    },
+    "attributes" : [ "object" ],
+    "id" : "136"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "137"
+  }, {
+    "range" : "5",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "138"
+  }, {
+    "range" : "5",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#fscaDescription",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "fscaDescription",
+      "en" : "FSCA description"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Textual description of the field safety corrective action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "140"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#detectionDate",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "detectionDate",
+      "en" : "detection date"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Date on which the incident was detected."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isActive",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "isActive",
+      "en" : "is active"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Boolean value indicating whether the device is active."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "143"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#authorizationNumber",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "145",
+    "label" : {
+      "IRI-based" : "authorizationNumber",
+      "en" : "authorization number"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Manufacturer authorization number."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "144"
+  }, {
+    "range" : "42",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "146"
+  }, {
+    "range" : "61",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "147"
+  }, {
+    "range" : "5",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isReusable",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "isReusable",
+      "en" : "is reusable"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Boolean value indicating whether the device is reusable."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "149"
+  }, {
+    "range" : "23",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "23",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "range" : "23",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "152"
+  }, {
+    "range" : "23",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#manufacturerName",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "manufacturerName",
+      "en" : "manufacturer name"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Name of the manufacturer."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "154"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#patientSex",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "patientSex",
+      "en" : "patient sex"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Sex of the patient involved in the incident, when available."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#eventDate",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "eventDate",
+      "en" : "event date"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Date on which the incident occurred."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "157"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#countriesAffected",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "159",
+    "label" : {
+      "IRI-based" : "countriesAffected",
+      "en" : "countries affected"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Textual description of the countries affected by the field safety corrective action."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "158"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#incidentDescription",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "incidentDescription",
+      "en" : "incident description"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Textual description of the reported incident."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "161"
+  }, {
+    "range" : "51",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "range" : "92",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#isImplantable",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isImplantable",
+      "en" : "is implantable"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Boolean value indicating whether the device is implantable."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "164"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#deviceName",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "160",
+    "label" : {
+      "IRI-based" : "deviceName",
+      "en" : "device name"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Literal name of the medical device."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "165"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#actionDate",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "156",
+    "label" : {
+      "IRI-based" : "actionDate",
+      "en" : "action date"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Date on which the field safety corrective action started."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "166"
+  }, {
+    "range" : "1",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "168"
+  }, {
+    "iri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology#hasRiskClass",
+    "baseIri" : "https://lvlupcodex.github.io/medical-device-risk-ontology/ontology",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasRiskClass",
+      "en" : "has risk class"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relates a device to its regulatory risk class."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "169"
+  }, {
+    "range" : "1",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "170"
+  }, {
+    "range" : "10",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "171"
+  }, {
+    "range" : "1",
+    "domain" : "85",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "172"
+  }, {
+    "range" : "1",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "173"
+  } ]
+}
